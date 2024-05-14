@@ -1,3 +1,182 @@
-.{
-    
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+/* Container Styles */
+.bg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card Styles */
+.card-outside {
+    margin-top: 50px;
+    width: 90%;
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.card-heading {
+    color: #393280;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Inside Card Styles */
+.card-inside {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.card-inside-padding {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Individual Product Styles */
+.individual-product-details {
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Image Styles */
+.individual-product-details-img {
+    max-height: 300px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 5px;
+}
+.contact-section {
+    text-align: justify;
+}
+
+
+@media (max-width: 768px) {
+    .individual-product-details {
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .card-inside-padding {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hr-line {
+        display: none;
+    }
+    .individual-product-details-Price-Section,
+    .individual-product-details-heading-rating {
+        display: flex;
+        flex-direction: column;
+    }
+    .individual-product-details-button {
+        margin-left: 0px;
+    }
+    .individual-product-details-discount {
+        margin-right: 0px;
+    }
+    .card-outside {
+        margin-top: 50px;
+        width: 85%;
+        background-color: #F4F4F4;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        
+    }
+}
+
+/* Product Details Styles */
+.individual-product-text-details {
+    width: 100%;
+}
+
+.individual-product-details-heading-rating,
+.individual-product-details-Price-Section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.individual-product-details-heading {
+    color: #393280;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 10px;
+}
+
+.individual-product-details-rating {
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.individual-product-Auther-span {
+    font-weight: 900;
+    color: #F4F4F4;
+}
+
+/* Price Styles */
+.individual-product-details-Price {
+    font-size: 20px;
+    color: #ED553B;
+}
+
+.individual-product-details-Price-small {
+    font-size: 10px;
+}
+
+.individual-product-details-discount {
+    margin-right: 100px;
+    font-size: 20px;
+    color: #ED553B;
+}
+
+.individual-product-details-text-decoration {
+    text-decoration-line: line-through;
+}
+
+/* Button Styles */
+.individual-product-details-button {
+    background-color: #ED553B;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-left: 100px;
+}
+
+.individual-product-details-button:hover {
+    background-color: #D24631;
+}
+
+.product-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Add gap between grid items */
+    justify-content: space-around; /* Add space around grid items horizontally */
+    align-content: space-around; /* Add space around grid items vertically */
+    font-family: "Inter", sans-serif;
+    margin-left: 20px;
+    padding: 20px;
 }

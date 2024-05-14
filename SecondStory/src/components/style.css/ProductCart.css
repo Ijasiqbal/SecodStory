@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.product {
+    border: 1px solid #ddd;
+    font-family: 'Inter', sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px; /* Add padding to the product container */
+    margin: 10px;
+}
+
+.product-image img {
+    height: 273px;
+    width: 200px;
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+@media screen and (max-width: 600px) {
+    .product-image img {
+        width: 100%;
+        max-width: 150px; /* Makes the image responsive by setting its width to 100% of its container */
+        height: auto; /* Allows the height to adjust proportionally */
+    }
+}
+
+.book-name {
+    font-size: 1.2em;
+    color: #393280;
+}
+
+.author-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author-name {
+    color: #888888;
+}
+
+.price {
+    font-weight: bold;
+    color: #ED553B;
+}
+
+.product-image {
+    position: relative; /* Allows positioning of the seller tag */
+}
+
+.seller-tag {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.Product-list-card{
+    display: flex;
+    flex-direction: row;
+}
