@@ -45,8 +45,8 @@ body {
 
 /* Individual Product Styles */
 .individual-product-details {
-    width: 30%;
-    padding: 20px;
+    width: 28%;
+    padding: 10px;
     display: flex;
     flex-direction: row;
 }
@@ -55,8 +55,9 @@ body {
 .individual-product-details-img {
     max-height: 300px;
     width: auto;
-    max-width: 100%;
+    max-width: 300px;
     border-radius: 5px;
+    
 }
 .contact-section {
     text-align: justify;
@@ -170,13 +171,4 @@ body {
     background-color: #D24631;
 }
 
-.product-card-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px; /* Add gap between grid items */
-    justify-content: space-around; /* Add space around grid items horizontally */
-    align-content: space-around; /* Add space around grid items vertically */
-    font-family: "Inter", sans-serif;
-    margin-left: 20px;
-    padding: 20px;
-}
+
