@@ -1,0 +1,83 @@
+body{
+    font-family: 'Inter',sans-serif;
+    background-color:  rgb(223, 219, 219); 
+    width: 100%;
+}
+.cart-container1{
+    display: flex;
+}
+
+.cart-container{
+    height: 50%;
+    width: 50%;
+    border: ridge;
+    border-radius: 1%;
+    border-color: rgba(0, 0, 0, 0.361);
+    margin-top: 8%;
+    margin-left: 5%;
+    background-color: white;
+}
+
+h1{
+    padding: 2%;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 5%;
+    font-family: 'Inter',sans-serif;
+}
+
+hr{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 1%;
+} 
+
+img{
+    height: 40%;
+    width: 30%;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+button{
+    margin-left: 125%;
+    margin-bottom: 2%;
+}
+
+.label1{
+    background-color: white;
+    border: ridge; 
+    border-radius: 2%;
+    border-color: rgba(0, 0, 0, 0.361);
+    margin-left: 150%;
+    width: 180%;
+    height: 40%; 
+}
+
+.ButtonA{
+    color: white;
+    margin-left: 39%;
+    margin-top: 2%;
+    background-color: orange;
+    border: ridge;
+    border-radius: 1%;
+    border-color: rgba(0, 0, 0, 0.361); 
+    font-size: 85%;
+}
+
+h3{
+    padding: 2%;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 5%;
+}
+
+p{
+    margin-left: 2%;
+}
+.label{
+    margin-left: 70%;
+    width: 60%;
+    margin-top: -45%
+}
+
