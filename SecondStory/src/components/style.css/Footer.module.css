@@ -1,0 +1,60 @@
+.base{
+    display: flex;
+    padding: 20px 5%;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    padding: 10px;
+    img{
+        height: 40px;
+    }
+    margin-bottom: 20px;
+    
+}
+.logoName{
+    display: inline-block;
+    margin: auto 0 ;
+}
+.socialMedia{
+    padding: 10px;
+    
+}
+.indIcon{
+    padding: 5px;
+    width: 20px;
+    margin: auto 5px;
+    font-size: 1.3em;
+    background-color: rgb(225, 225, 225);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.indIcon:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.lhs{
+}
+.rhs{
+    display: flex;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-right: 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.col a{
+    opacity: 75%;
+    margin-bottom: 10px;
+}
+.copyright{
+    font-size: 10px;
+    padding-left: 5%;
+    padding-bottom: 50px;
+
+}

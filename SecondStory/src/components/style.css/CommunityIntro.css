@@ -1,0 +1,38 @@
+.commBase{
+    display: flex;
+    padding: 0 3%;
+}
+.lhs{
+    width: 110%;
+    img{
+        width: 100%;
+    
+    }
+}
+.rhs{
+    padding: 3%;
+    margin: auto 0;
+    h3{
+        font-size: 28px;
+        letter-spacing: 1.8px;
+        font-weight: bold;
+    }
+    p{
+        font-size: 18px;
+        letter-spacing: 1.2px;
+        font-weight: lighter;
+    }
+}
+.btn
+{
+    padding: 10px 20px;
+    background-color: #368800;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
