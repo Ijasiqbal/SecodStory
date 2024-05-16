@@ -1,6 +1,6 @@
 body {
     font-family: 'Inter', sans-serif;
-    
+    background-color: rgb(243, 236, 236);
   }
 
 .cart-container {
@@ -16,8 +16,9 @@ body {
   .cart-container h1 {
     font-weight: normal;
     font-size: 150%;
-    padding: 1%;
+    padding: 2%;
     margin-left: 2%; 
+    margin-top: 2%;
   }
   
   .cart-container hr {
@@ -61,7 +62,7 @@ body {
   }
   
   .ButtonA:hover {
-    background-color: green;
+    background-color: rgb(55, 209, 55);
   }
   
   .item-details{
@@ -70,6 +71,10 @@ body {
     margin-inline-start: 5%;
     vertical-align: top;
     margin-top: 5%;
+  }
+
+  .item-details h2{
+    
   }
 
   .cart-item button{

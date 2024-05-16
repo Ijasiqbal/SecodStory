@@ -55,7 +55,7 @@ const CartPage = () => {
           <button className="ButtonA" type="submit" name="Button">Proceed</button> 
         </div> 
       </div> 
-    </div>
+    </div> 
     </div>
     </>
   );
