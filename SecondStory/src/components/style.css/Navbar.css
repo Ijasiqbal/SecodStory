@@ -1,10 +1,12 @@
 .base{
     position: fixed;
     top: 8px;
-    width: 96%;
+    width: 98%;
+;
+    margin: 0 1%;
     
     background-color: rgb(255, 255, 255);
-    padding: 0 25px;
+    padding: 5px 25px;
     border-radius: 25px;
     box-shadow: 0px 4px 4px 0px #00000037;
     display: flex;
@@ -25,11 +27,15 @@
     align-items: center;
     font-size: 22px;
     margin-right: 5%;
+    cursor: pointer;
 }
 .nav{
     display: flex;
     margin-right: 5%;
-
+    align-items: center;
+}
+.nav ul{
+    margin: auto 0;
 }
 .search{
     padding: 0 10px;
@@ -42,7 +48,7 @@
     height: 35px;
     p{
         display: flex;
-        align-items: center;
+        margin: auto 0;
     }
     i{
         margin: auto 0;
@@ -53,7 +59,7 @@
     display: flex;  
     align-items: center;
     margin-left: auto;
-    margin-right: 3%;
+    margin-right: 5%;
        i{
         padding: 0 15%;
 
@@ -72,5 +78,12 @@
         width: 20%;
         font-size: 12px;
     }
+    
+}
+@media screen and (max-width: 769px){
+    .nav{
+        
+    }
+    
     
 }

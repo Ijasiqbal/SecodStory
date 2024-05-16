@@ -1,23 +1,24 @@
 import React from 'react';
-import Carousel from 'react-material-ui-carousel';
-import { Paper } from '@mui/material';
+import { Carousel } from 'react-bootstrap';
 import corousel1 from '../assets/corousel1.jpg';
 import corousel2 from '../assets/SLIDE2.jpg';
+import banner1 from '../assets/banner1.jpg';
+import banner2 from '../assets/banner2.jpg';
 
 export default function Corousel() {
   const items = [
-    { img: corousel1, alt: 'slide 1' },
-    { img: corousel2, alt: 'slide 2' },
+    { img: banner1, alt: 'slide 1' },
+    { img: banner2, alt: 'slide 2' },
     { img: corousel1, alt: 'slide 3' },
   ];
 
   return (
     <div className='carousalbase'>
-      <Carousel autoPlay>
+      <Carousel>
         {items.map((item, i) => (
-          <Paper key={i}>
+          <Carousel.Item key={i}>
             <img className="d-block w-100" src={item.img} alt={item.alt} />
-          </Paper>
+          </Carousel.Item>
         ))}
       </Carousel>
     </div>

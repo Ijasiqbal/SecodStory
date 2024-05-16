@@ -1,18 +1,17 @@
 .base{
-    padding: 50px 5%;
-    
-    
+    padding: 80px 5%;
 }
+
 .row{
     display: flex;
     justify-content: center;
 }
-.col1{
+
+.col1, .col2{
     padding: 2%;
+    position: relative;
 }
-.col2{
-    padding: 2%;
-}
+
 .txtBox{
     border: 1px solid rgba(0, 0, 0, 0.271);
     width: 390px;
@@ -22,12 +21,13 @@
     font-size: 32px;
     font-weight: bold;
     text-align: center;
-    h2{
-        margin-bottom: 0px;
-        margin-top: 25px;
-    }
-
 }
+
+.txtBox h2{
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
 .btn{
     padding: 10px 20px;
     background-color: #368800;
@@ -40,8 +40,20 @@
     cursor: pointer;
     display: inline-block;
 }
+
 .col1 img, .col2 img {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.imageText {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

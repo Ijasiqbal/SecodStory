@@ -3,6 +3,7 @@ import logo from '../assets/logo.png'
 import styles from './style.css/Footer.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Footer() {
   return (

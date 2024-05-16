@@ -9,11 +9,11 @@ export default function Navbar() {
     
   return (
     <div className='base'>
-      <div className="brand"><i><img src={logo} alt="logo" /></i>SecondStory</div>
+      <div className="brand" onClick={()=>{window.location.href="/"}}><i><img src={logo} alt="logo" /></i>SecondStory</div>
         <div className='nav'>
                 <ul>Home</ul>
                 <ul>Community</ul>
-                <ul>Market</ul>
+                <ul onClick={()=>{window.location.href='/product'}}>Market</ul>
         </div>
         <div className="search">
             <p>Search for books</p>

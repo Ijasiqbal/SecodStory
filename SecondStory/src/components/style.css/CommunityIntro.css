@@ -1,6 +1,6 @@
 .commBase{
     display: flex;
-    padding: 0 3%;
+    padding: 0 6%;
 }
 .lhs{
     width: 110%;
@@ -25,14 +25,14 @@
 }
 .btn
 {
-    padding: 10px 20px;
-    background-color: #368800;
-    border: none;
-    border-radius: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    margin-top: 20px;
-    cursor: pointer;
-    display: inline-block;
+    padding: 10px 20px!important;
+    background-color: #368800!important;
+    border: none!important;
+    border-radius: 15px!important;
+    font-size: 18px!important;
+    font-weight: bold!important;
+    color: white!important;
+    margin-top: 20px!important;
+    cursor: pointer!important;
+    display: inline-block!important;
 }
