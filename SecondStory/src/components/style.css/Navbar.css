@@ -1,3 +1,89 @@
-.{
+.base{
+    position: fixed;
+    top: 8px;
+    width: 98%;
+;
+    margin: 0 1%;
+    
+    background-color: rgb(255, 255, 255);
+    padding: 5px 25px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px 0px #00000037;
+    display: flex;
+    z-index: 100;
+
+}
+.brand img{
+    height: 100%;
+    display: inline-block;
+    margin: auto 0;
+}
+.brand I{
+    height: 40PX;
+    margin-right: 8px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    margin-right: 5%;
+    cursor: pointer;
+}
+.nav{
+    display: flex;
+    margin-right: 5%;
+    align-items: center;
+}
+.nav ul{
+    margin: auto 0;
+}
+.search{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    margin: auto 0;
+    height: 35px;
+    p{
+        display: flex;
+        margin: auto 0;
+    }
+    i{
+        margin: auto 0;
+    }
+    
+}
+.icons{
+    display: flex;  
+    align-items: center;
+    margin-left: auto;
+    margin-right: 5%;
+       i{
+        padding: 0 15%;
+
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-width: 975px){
+    .brand{
+        margin-right: 0;
+        font-size: 18px;
+    }
+    .nav{
+        font-size:14px;
+    }
+    .search{
+        width: 20%;
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width: 769px){
+    .nav{
+        
+    }
+    
     
 }

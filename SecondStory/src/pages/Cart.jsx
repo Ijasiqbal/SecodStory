@@ -5,6 +5,8 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import f1 from '../assets/f1.jpg';
 import f2 from '../assets/f2.jpg'; 
 import f3 from '../assets/f3.jpg'; 
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([ 
@@ -23,7 +25,9 @@ const CartPage = () => {
   const totalPrice = subtotal + deliveryCharge;
 
   return (
-    <div className='cart-container'> 
+    <>
+    <Navbar />
+        <div className='cart-container'> 
       <h1>Shopping Cart</h1> <hr></hr> 
       <div className='cart-container1'>
       <div className='cart-items-container'> 
@@ -53,6 +57,7 @@ const CartPage = () => {
       </div> 
     </div>
     </div>
+    </>
   );
 };
 

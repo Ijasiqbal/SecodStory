@@ -1,6 +1,6 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: rgb(243, 236, 236);
+    
   }
 
 .cart-container {
@@ -52,7 +52,7 @@ body {
     width: 50%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #007bff;
+    background-color: green;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -61,7 +61,7 @@ body {
   }
   
   .ButtonA:hover {
-    background-color: #0056b3;
+    background-color: green;
   }
   
   .item-details{
