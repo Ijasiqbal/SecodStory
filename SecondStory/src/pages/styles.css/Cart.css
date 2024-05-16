@@ -1,83 +1,84 @@
-body{
-    font-family: 'Inter',sans-serif;
-    background-color:  rgb(223, 219, 219); 
-    width: 100%;
-}
-.cart-container1{
-    display: flex;
-}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(243, 236, 236);
+  }
 
-.cart-container{
-    height: 50%;
-    width: 50%;
-    border: ridge;
-    border-radius: 1%;
-    border-color: rgba(0, 0, 0, 0.361);
-    margin-top: 8%;
-    margin-left: 5%;
-    background-color: white;
-}
-
-h1{
-    padding: 2%;
-    font-size: 20px;
-    font-weight: 100;
-    margin-left: 5%;
-    font-family: 'Inter',sans-serif;
-}
-
-hr{
+.cart-container {
+    max-width: 50%;
+    margin-left: 8%;
+    margin-top: 7%;
+    padding: 1px;
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    background-color: white; 
+  }
+  
+  .cart-container h1 {
+    font-weight: normal;
+    font-size: 150%;
+    padding: 1%;
+    margin-left: 2%; 
+  }
+  
+  .cart-container hr {
     margin-left: 3%;
     margin-right: 3%;
-    margin-top: 1%;
-} 
-
-img{
-    height: 40%;
-    width: 30%;
-    margin-left: 8%;
-    margin-top: 5%;
-}
-
-button{
-    margin-left: 125%;
-    margin-bottom: 2%;
-}
-
-.label1{
+  }
+  
+  .cart-item img {
+    width: 25%;
+    height: 35%;
+    padding: 2%; 
+  }
+  
+  
+  .order-summary {
+    margin-top: 20px;
+    position: fixed; 
+    right: 10%;
+    top: 100px; 
+    width: 300px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
     background-color: white;
-    border: ridge; 
-    border-radius: 2%;
-    border-color: rgba(0, 0, 0, 0.361);
-    margin-left: 150%;
-    width: 180%;
-    height: 40%; 
-}
+  }
+  
+  .summary-details {
+    padding: 20px;
+  }
+  
+  .ButtonA {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 25%;
+  }
+  
+  .ButtonA:hover {
+    background-color: #0056b3;
+  }
+  
+  .item-details{
+    display: inline-block;
+    position: relative;
+    margin-inline-start: 5%;
+    vertical-align: top;
+    margin-top: 5%;
+  }
 
-.ButtonA{
-    color: white;
-    margin-left: 39%;
-    margin-top: 2%;
-    background-color: orange;
-    border: ridge;
-    border-radius: 1%;
-    border-color: rgba(0, 0, 0, 0.361); 
-    font-size: 85%;
-}
-
-h3{
-    padding: 2%;
-    font-size: 20px;
-    font-weight: 100;
-    margin-left: 5%;
-}
-
-p{
-    margin-left: 2%;
-}
-.label{
-    margin-left: 70%;
-    width: 60%;
-    margin-top: -45%
-}
-
+  .cart-item button{
+    margin-left: 20%;
+  }
+ 
+  @media (max-width: 768px) {
+    .cart-items-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
