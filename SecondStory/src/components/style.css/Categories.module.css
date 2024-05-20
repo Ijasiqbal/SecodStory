@@ -21,11 +21,13 @@
     font-size: 32px;
     font-weight: bold;
     text-align: center;
+    padding: 1%;
 }
 
 .txtBox h2{
     margin-bottom: 0px;
     margin-top: 25px;
+    font-weight: bold;
 }
 
 .btn{
@@ -56,4 +58,23 @@
     color: white;
     font-size: 24px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 769px){
+    .imageText{
+        font-size: 18px;
+    }
+    .txtBox{
+            font-size: 18px;
+            height: auto;
+        h2{
+            margin-top: 10px;
+        }
+    }
+    .btn{
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-top: 7px;
+    }
 }
