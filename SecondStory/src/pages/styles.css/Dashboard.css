@@ -1,0 +1,83 @@
+/* Dashboard container setup with flex layout */
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* Full height to ensure sidebar extends the full height */
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 200px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Sidebar button styling */
+  .sidebar button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 10px;
+    margin: 10px 0;
+    background-color: #e0e0e0;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .sidebar button i {
+    margin-right: 8px;
+  }
+  
+  .sidebar button:hover {
+    background-color: #d0d0d0;
+  }
+  
+  .sidebar button.active {
+    background-color: #000;
+    color: white;
+  }
+  
+  /* Content area styling */
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff; /* Background color for content area */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Base class for content sections, hidden by default */
+  .content-section {
+    display: none;
+    width: 100%;
+  }
+  
+  /* Modifier class to display the active content section */
+  .content-section.active {
+    display: block;
+  }
+  
+  /* Specific styles for the shelf section */
+  .shelf-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 15px 10px;
+    margin: 10px 0;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+  }
+  
+  
+  

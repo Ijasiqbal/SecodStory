@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './style.css/ProductCart.css';
+import './style.css/ProductCard.css';
 
-function ProductCart() {
+function ProductCard() {
   // Sample product data
   const [products, setProducts] = useState([
     {
@@ -173,4 +173,4 @@ function ProductCart() {
   );
 }
 
-export default ProductCart;
+export default ProductCard;

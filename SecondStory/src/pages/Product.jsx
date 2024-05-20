@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import './styles.css/Product.css'; // Assuming you have a CSS file for Product component
-import ProductCard from '../components/ProductCart'
+import ProductCard from '../components/ProductCard'
 
 const Rating = ({ rating }) => {
   const stars = Array.from({ length: 5 }, (_, index) => (
@@ -25,7 +25,6 @@ const Product = () => {
           <div className='card-inside-padding'>
             <div className='individual-product-details'>
               <img src="https://m.media-amazon.com/images/I/813aV273-rL._SL1500_.jpg" className="individual-product-details-img" alt="Product" />
-              <hr className='hr-line'/>
             </div>
             <div className='individual-product-text-details'>
               <div>
