@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import './styles.css/Product.css'; // Assuming you have a CSS file for Product component
 import ProductCard from '../components/ProductCard'
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const Rating = ({ rating }) => {
   const stars = Array.from({ length: 5 }, (_, index) => (
@@ -18,6 +20,9 @@ const Rating = ({ rating }) => {
 
 const Product = () => {
   return (
+    <>
+    <Navbar />
+
     <div className="bg-container">
       <div className="card-outside">
         <h1 className="card-heading">Our Best Deal:</h1>
@@ -57,6 +62,9 @@ const Product = () => {
         <ProductCard/>
       </div>
     </div>
+
+    <Footer />
+    </>
   );
 }
 
