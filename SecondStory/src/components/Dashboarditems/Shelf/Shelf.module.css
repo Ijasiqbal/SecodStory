@@ -1,0 +1,14 @@
+.base{
+}
+img{
+    width: 100%;
+} 
+.shelf1{
+    position: relative;
+}
+.row{
+    position: absolute;
+    bottom: 30px;
+    padding-left: 5%;
+    
+}

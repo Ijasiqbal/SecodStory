@@ -1,100 +1,117 @@
-.base{
-    position: fixed;
-    top: 8px;
-    width: 98%;
-;
-    margin: 0 1%;
-    
-    background-color: rgb(255, 255, 255);
-    padding: 5px 25px;
-    border-radius: 25px;
-    box-shadow: 0px 4px 4px 0px #00000037;
-    display: flex;
-    z-index: 100;
-
+.body{
+  width: 100%;
 }
-.brand img{
+a{
+  text-decoration: none;
+  color: black;
+}
+.navbar{
+  position: fixed;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 4px 0px #00000037;
+  width: 98%;
+  margin: 0 1%;
+  border-radius: 25px;
+  top: 8px;
+  padding: 5px 20px;
+}
+.menu{
+  display: none;
+}
+.logo{
+  display: flex;
+  height: 45px;
+  align-items: center;
+  img{
+    height: 45px;
+  }
+  h2{
+    margin: auto;
+    font-size: 24px;
     height: 100%;
-    display: inline-block;
-    margin: auto 0;
+  }
 }
-.brand I{
-    height: 40PX;
-    margin-right: 8px;
+.none{
+  display: none;
 }
-.brand{
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    margin-right: 5%;
-    cursor: pointer;
+.searchInput input{
+  width: 100%;
+  height: 35px;
+  border-radius: 25px!important;
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.19);
+  border: none;
+  margin: auto 0!important;
 }
-.nav{
-    display: flex;
-    margin-right: 5%;
-    align-items: center;
+.navLinks{
+  margin: 0 3%;
+  margin-right: 2%;
+  font-size: 14px;
+  a{
+    margin-right: 10px;
+  }
+  
 }
-.nav ul{
-    margin: auto 0;
+  
+.openNav {
+  position: fixed;
+  top: 65px;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #e2e2e2;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
 }
-.search{
-    padding: 0 10px;
-    display: flex;
-    justify-content: space-between;
-    width: 25%;
-    background-color: rgba(0, 0, 0, 0.19);
-    border-radius: 25px;
-    margin: auto 0;
-    height: 35px;
-    p{
-        display: flex;
-        margin: auto 0;
-    }
-    i{
-        margin: auto 0;
-    }
-    
+.openNav a{
+  display: block;
+  margin-bottom: 10px;
 }
-.icons{
-    display: flex;  
-    align-items: center;
-    margin-left: auto;
-    margin-right: 5%;
-       i{
-        padding: 0 15%;
 
-        font-size: 1.3em;
-    }
+.none1 {
+  position: fixed;
+  top: 65px;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #e2e2e2;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
 }
-@media screen and (max-width: 975px){
-    .brand{
-        margin-right: 0;
-        font-size: 18px;
-    }
-    .nav{
-        font-size:14px;
-    }
-    .search{
-        width: 20%;
-        font-size: 12px;
-    }
-    
+.none1 a{
+  display: block;
+  margin-bottom: 10px;
 }
+.icon-grp{
+  margin-left: auto;
+  a{
+    margin-right: 10px;
+  }
+}
+
 @media screen and (max-width: 769px){
-    .base{}
-    .nav{
-        flex-direction: column;
+  .menu{
+    display: inline-block;
+  }
+  .logo{
+    h2{
+      font-size: 20px;
+      margin-left: 5px;
     }
-    .nav ul{
-        display: block;
-        position: absolute;
-        top: 150px;
-        left: 0;
-        
-        
-        
-        
-    }
-    
-    
+  }
+  .navLinks{
+    display: none;
+  }
+  .icon-grp{
+
+  }
+  .mobileNone{
+    display: none;
+  }
+  
 }
