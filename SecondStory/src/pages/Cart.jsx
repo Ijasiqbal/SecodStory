@@ -1,4 +1,3 @@
-import './styles.css/Cart.css';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons'; 
@@ -7,6 +6,7 @@ import f2 from '../assets/f2.jpg';
 import f3 from '../assets/f3.jpg'; 
 import Navbar from '../components/Navbar'
 import AddressBox from './AddressBox'; 
+import styles from './styles.css/Cart.module.css'; // Import styles as a module
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([ 
@@ -17,9 +17,9 @@ const CartPage = () => {
 
   const PriceDisplay = ({ originalPrice, discountedPrice }) => {
     return(
-      <div className="price-display">  
-        <span className="original-price">Rs.{originalPrice}</span>
-        <span className="discounted-price">Rs.{discountedPrice}/-</span>    
+      <div className={styles['price-display']}>  
+        <span className={styles['original-price']}>Rs.{originalPrice}</span>
+        <span className={styles['discounted-price']}>Rs.{discountedPrice}/-</span>    
       </div>  
     );
   };
@@ -37,35 +37,35 @@ const CartPage = () => {
     <>
     <Navbar />
     <AddressBox /> 
-        <div className='cart-container'>  
+        <div className={styles['cart-container']}>  
       <h1>Shopping Cart</h1> <hr></hr> 
-      <div className='cart-container1'>
-      <div className='cart-items-container'> 
+      <div className={styles['cart-container1']}>
+      <div className={styles['cart-items-container']}> 
         {cartItems.map(item => ( 
-          <div key={item.id} className='cart-item'>  
+          <div key={item.id} className={styles['cart-item']}>  
             <img src={item.image} alt="img" /> 
-            <div className='item-details'>  
+            <div className={styles['item-details']}>  
               <h2>{item.name}</h2>
               <p>{item.category}</p> 
               <p>{item.author}</p>
               <h3> Price: <PriceDisplay originalPrice={item.originalPrice} discountedPrice={item.discountedPrice} />  </h3>
             </div> 
-            <button className="icon-button" onClick={() => handleRemoveItem(item.id)}>
+            <button className={styles['icon-button']} onClick={() => handleRemoveItem(item.id)}>
                 <FontAwesomeIcon icon={faTrash} />
             </button> 
              <hr></hr>
           </div> 
         ))} 
       </div>
-      <div className='order-summary'> 
-        <div className='summary-details'>  
+      <div className={styles['order-summary']}> 
+        <div className={styles['summary-details']}>  
           <h4>Order Summary</h4>
           <hr />
           <p>Subtotal: Rs. {subtotal}/-</p>
           <p>Delivery Charges: Rs. {deliveryCharge}/-</p> 
           <p>Coupon Discount: <input type='text'></input></p>
           <p>Total Price: Rs. {totalPrice}/-</p>
-          <button className="ButtonA" type="submit" name="Button">Proceed</button>  
+          <button className={styles.ButtonA} type="submit" name="Button">Proceed</button>  
         </div> 
       </div> 
     </div> 
