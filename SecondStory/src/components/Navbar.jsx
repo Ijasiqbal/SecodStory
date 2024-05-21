@@ -21,7 +21,7 @@ export default function Navbar() {
         </div>
         <div className="icons">
             <i><FontAwesomeIcon icon={faHeart} /></i>  {/* Wishlist icon */}
-            <i><FontAwesomeIcon icon={faShoppingCart} /></i>  {/* Cart icon */}
+            <i><FontAwesomeIcon icon={faShoppingCart} onClick={()=>{window.location.href="/cart"}} /></i>  {/* Cart icon */}
             <i><FontAwesomeIcon icon={faUser} /></i>  {/* Profile icon */}
         </div>
     </div>

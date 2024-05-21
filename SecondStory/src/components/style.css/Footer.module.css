@@ -57,3 +57,16 @@ a{
     padding-bottom: 50px;
 
 }
+@media screen and (max-width: 769px){
+    .base{
+        flex-direction: column;
+    }
+    .logo{
+        margin-bottom: 0px;
+    }
+    .col{
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+}
