@@ -15,7 +15,7 @@ body{
     flex-direction: row;
   }
 
-  .address-box .button-box{
+  .address-box .button-box{ 
     width: 30%;
     margin-left: 50%;
     margin-top: 5%;
@@ -43,3 +43,15 @@ body{
     color: white;
   }
   
+  @media (max-width: 480px){
+    .address-box{
+      margin-top: 20%;
+      width: 100%;
+      margin-left: 0%; 
+    }
+
+    .address-box .button{
+      width: 100%;
+      margin-top: 5%;
+    }
+  }

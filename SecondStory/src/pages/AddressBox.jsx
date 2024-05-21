@@ -36,7 +36,7 @@ const AddressBox = () => {
       <div className='button-box'>
          <button className="button" onClick={handleOpenModal}>Change Address</button>
          {isModalOpen && <AddressModal onClose={handleCloseModal} onSave={handleSaveAddress} currentAddress={address} />}
-      </div>
+      </div> 
     </div>
   );
 };
