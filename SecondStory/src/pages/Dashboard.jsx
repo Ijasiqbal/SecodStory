@@ -3,6 +3,7 @@ import './styles.css/Dashboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faUser, faEdit, faHeart, faMapMarkerAlt, faBox, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import Shelf from '../components/Dashboarditems/Shelf/Shelf'
+import Profile from '../components/Dashboarditems/Profile/Profile'
 
 function Dashboard() {
   const [activeSection, setActiveSection] = useState('Shelf');
@@ -25,6 +26,7 @@ function Dashboard() {
         </div>
         <div className={`content-section ${activeSection === 'Profile' ? 'active' : ''}`}>
           <h1 className='shelf-content'>Profile Content</h1>
+          <Profile/>
         </div>
         <div className={`content-section ${activeSection === 'EditProfile' ? 'active' : ''}`}>
           <h1 className='shelf-content'>Edit Profile Content</h1>

@@ -45,35 +45,13 @@ function Login() {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email:</label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              required 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)} 
-              aria-label="Email"
-            />
+            <input type="email" id="email" name="email" required value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Email"/>
             <label htmlFor="password">Password:</label>
-            <input 
-              type={showPassword ? 'text' : 'password'} 
-              id="password" 
-              name="password" 
-              required 
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)} 
-              aria-label="Password"
-            />
+            <input type={showPassword ? 'text' : 'password'} id="password" name="password" required value={password} onChange={(e) => setPassword(e.target.value)} aria-label="Password"/>
             <div className="password-container">
               <div className="show-password-container">
                 <div className='checkbox-container'>
-                  <input 
-                    type="checkbox" 
-                    id="show-password" 
-                    checked={showPassword} 
-                    onChange={togglePasswordVisibility} 
-                    aria-label="Show Password"
-                  />
+                  <input type="checkbox" id="show-password" checked={showPassword} onChange={togglePasswordVisibility} aria-label="Show Password"/>
                   <label htmlFor="show-password" className='show-password-text'>Remember Me</label>
                 </div>
               </div>

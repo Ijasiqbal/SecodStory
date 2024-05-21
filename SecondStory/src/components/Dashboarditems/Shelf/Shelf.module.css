@@ -1,90 +1,65 @@
 .bookshelf {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.shelf {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.label {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.navArrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.navArrow:first-of-type {
-  left: 10px;
-}
-
-.navArrow:last-of-type {
-  right: 10px;
-}
-
-.books {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.book {
-  margin: 0 5px;
-}
-
-.book img {
-  width: 100px;
-  height: auto;
-  border-radius: 4px;
-}
-
-.placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 150px;
-  background-color: #f0f0f0;
-  border: 2px dashed #ccc;
-  border-radius: 4px;
-  font-size: 24px;
-  color: #aaa;
-  cursor: pointer;
-}
-
-.form {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.form input {
-  padding: 5px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.form button {
-  padding: 5px 10px;
-  border: none;
-  background-color: #28a745;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 800px;
+    background-image: url('../../../assets/wooden-book-shelf.jpg'); /* Path to your wooden texture image */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-repeat: no-repeat;
+  }
+  
+  .shelf {
+    display: flex;
+    align-items: center;
+     /* Prevents the image from repeating */
+  }
+  
+  .label {
+    width: 69px; 
+    height: 70px;
+    padding: 30px;
+    margin-right: 20px;
+    font-weight: bold;
+    background:  url('../../../assets/note-paper-clip.png'); /* Path to your background image for the label */
+    background-size: cover; /* Ensures the background image covers the label */
+    
+  }
+  
+  .books {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+  }
+  
+  .book {
+    width: 100px;
+    height: 150px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    position: relative;
+  }
+  
+  .book img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 150px;
+    border: 2px dashed #ccc;
+  }
+  
+  .navArrow {
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+  }
+  

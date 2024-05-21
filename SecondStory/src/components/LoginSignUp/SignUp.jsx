@@ -8,6 +8,7 @@ import linkedin from '../../assets/linkedin.png';
 function SignUp() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [username, setUsername] = useState('')
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
@@ -23,6 +24,7 @@ function SignUp() {
     // Handle sign-up logic here
     console.log('First Name:', firstName);
     console.log('Last Name:', lastName);
+    console.log('Username:', username);
     console.log('Email:', email);
     console.log('Phone:', phone);
     console.log('Password:', password);
@@ -60,7 +62,8 @@ function SignUp() {
                 <input type="text" id="lastName" name="lastName" required value={lastName} onChange={(e) => setLastName(e.target.value)} aria-label="Last Name"/>
               </div>
             </div>
-            
+            <label htmlFor="username">Username:</label>
+              <input type="text" id="username" name="username" required value={username} onChange={(e) => setUsername(e.target.value)}aria-label="Username"/>
               <label htmlFor="email">Email:</label>
               <input type="email" id="email" name="email" required value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Email"/>
               <label htmlFor="phone">Phone:</label>

@@ -8,8 +8,8 @@ body {
 }
 
 .signup-container {
-  background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/arvrbg.png");
-  height: 100vh;
+  background-image: url("https://media.istockphoto.com/id/1302010598/photo/pen-and-paper.jpg?s=2048x2048&w=is&k=20&c=vd27G3aSg6saHOldPWwwctW4eLCSQr2F_21B_V3BdS8=");
+  height: 100%;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -29,6 +29,7 @@ body {
     padding-bottom: 30px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 5px;
+    margin: 50px;
 }
   
 .SecondStory-logo {
@@ -47,7 +48,7 @@ h2 {
 .form-group-names{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .form-group-column{
@@ -154,10 +155,7 @@ input[id="phone"]{
 }
 
 @media (max-width: 400px) {
-
-    .SecondStory-logo{
-        display: none;
-    }
+  
     .signup-form-container {
         padding: 20px;
     }
