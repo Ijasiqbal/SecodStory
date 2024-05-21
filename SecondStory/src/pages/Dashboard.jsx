@@ -3,11 +3,14 @@ import './styles.css/Dashboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faUser, faEdit, faHeart, faMapMarkerAlt, faBox, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import Shelf from '../components/Dashboarditems/Shelf/Shelf'
+import Navbar from '../components/Navbar';
 
 function Dashboard() {
   const [activeSection, setActiveSection] = useState('Shelf');
 
   return (
+    <>
+    <Navbar />
     <div className="dashboard-container">
       <div className="sidebar">
         <button onClick={() => setActiveSection('Shelf')} className={activeSection === 'Shelf' ? 'active' : ''}><i><FontAwesomeIcon icon={faBook} /></i> Shelf</button>
@@ -43,6 +46,8 @@ function Dashboard() {
         </div>
       </div>
     </div>
+
+    </>
   );
 }
 

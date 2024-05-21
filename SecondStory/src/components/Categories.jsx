@@ -12,7 +12,7 @@ export default function Categories() {
         <div className={styles.row}>
             <div className={styles.col1}>
                 <img src={Cate1} alt="category1" />
-                <div className={styles.imageText}>Fiction &and Fantasy</div>
+                <div className={styles.imageText}>Fiction & and Fantasy</div>
             </div>
             <div className={ `${styles.col} ${styles.txtBox}`}>
                 <h2>Explore our top categories</h2>

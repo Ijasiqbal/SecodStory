@@ -1,0 +1,18 @@
+.base{
+    width: 100px;
+    height: 135px;
+    border: 1px dotted white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 35px;
+    z-index: 101;
+}
+.plus{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+
