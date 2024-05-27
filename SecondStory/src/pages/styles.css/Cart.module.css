@@ -1,12 +1,16 @@
 body {
     font-family: 'Inter', sans-serif;
     
+    
   }
 .cartMain{
     background-color: rgb(243, 236, 236);
+    padding-top: 40px;
+    padding-bottom: 100px;
 }
   
   .cart-container {
+    
     max-width: 50%;
     margin-left: 8%;
     margin-top: 1%;

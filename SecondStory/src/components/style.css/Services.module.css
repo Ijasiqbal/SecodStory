@@ -2,6 +2,7 @@
     padding: 150px 5%;
     background: linear-gradient(to bottom, #dfdfdf, #ffffff); 
     padding-top: 50px;
+    width: 100%;
     
 }
 .heading{
@@ -56,4 +57,22 @@
     height: 120px;
     width: auto;
   }
+@media screen and (max-width: 768px){
+    .container .glass img {
+        font-size: 2em;
+        fill: #000000;
+        height: 80px;
+        width: auto;
+      }
+      .container .glass {
+        width: 120px;
+        height: 140px;
+        font-size: 0;
+        
+      }
+      .heading{
+        margin-bottom: 50px ;
+      }
+  
+}
   

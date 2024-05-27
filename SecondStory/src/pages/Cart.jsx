@@ -6,7 +6,8 @@ import f2 from '../assets/f2.jpg';
 import f3 from '../assets/f3.jpg'; 
 import Navbar from '../components/Navbar'
 import AddressBox from './AddressBox'; 
-import styles from './styles.css/Cart.module.css'; 
+import styles from './styles.css/Cart.module.css'; // Import styles as a module
+import Footer from '../components/Footer';
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([ 
@@ -35,6 +36,7 @@ const CartPage = () => {
 
   return (
     <>
+    <div className={styles['cartMain']} >
     <Navbar />
     <AddressBox /> 
         <div className={styles['cart-container']}>  
@@ -70,6 +72,9 @@ const CartPage = () => {
       </div> 
     </div> 
     </div>
+
+    </div>
+    <Footer />
     </>
   );
 };

@@ -12,6 +12,56 @@ function Dashboard() {
     <>
     <Navbar />
     <div className="dashboard-container">
+      {/* <div className="sidebar dashboard-nav">
+      <nav aria-labelledby="nav-title-social" className='dashboard-nav'>
+        <ul>
+          <li>
+            <h2 id="nav-title-social">Alvaro's Social Media</h2>
+          </li>
+          <li>
+            <a href="" target="_blank">
+              Website
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/alvaromontoro/" target="_blank">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://front-end.social/@alvaromontoro" target="_blank">
+              <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+              Mastodon
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/alvaro_montoro" target="_blank">
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/c/alvaromontorocss" target="_blank">
+              YouTube
+            </a>
+          </li>
+          <li>
+            <a href="https://codepen.io/alvaromontoro" target="_blank">
+              CodePen
+            </a>
+          </li>
+          <li>
+            <a href="https://stackoverflow.com/users/3695983/alvaro-montoro" target="_blank">
+              StackOverflow
+            </a>
+          </li>
+          <li>
+            <a href="https://es.stackoverflow.com/users/250/alvaro-montoro" target="_blank">
+              StackOverflow (Espa&ntilde;ol)
+            </a>
+          </li>
+        </ul>
+      </nav>
+      </div> */}
       <div className="sidebar">
         <button onClick={() => setActiveSection('Shelf')} className={activeSection === 'Shelf' ? 'active' : ''}><i><FontAwesomeIcon icon={faBook} /></i> Shelf</button>
         <button onClick={() => setActiveSection('Profile')} className={activeSection === 'Profile' ? 'active' : ''}><i><FontAwesomeIcon icon={faUser} /></i>Profile</button>
