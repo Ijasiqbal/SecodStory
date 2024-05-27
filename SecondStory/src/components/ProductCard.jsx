@@ -25,7 +25,7 @@ function ProductCard() {
       name: "It Ends With Us",
       author: "Colleen Hoover",
       price: "170",
-      image: "https://m.media-amazon.com/images/I/51kkeE8Jv+L._SY445_SX342_.jpg",
+      image: "https://m.media-amazon.com/images/I/51kkeE8Jv+L._SY445_SX342_.jpg",      
       tag: "Lender" // Sample tag type
   },
   {
@@ -57,7 +57,7 @@ function ProductCard() {
       name: "It Ends With Us",
       author: "Colleen Hoover",
       price: "200",
-      image: "https://m.media-amazon.com/images/I/61V813zEOzL._SY445_SX342_.jpg",
+      image: "https://m.media-amazon.com/images/I/61V813zEOzL._SY445_SX342_.jpg",   
       tag: "Seller" // Sample tag type
   },
   {
@@ -120,7 +120,7 @@ function ProductCard() {
   ]);
 
   // State variable to manage filtering
-  const [filterOption, setFilterOption] = useState('priceLowToHigh');
+  const [filterOption, setFilterOption] = useState('priceLowToHigh'); 
 
   // Function to handle filtering
   const handleFilterChange = (event) => {
@@ -129,7 +129,7 @@ function ProductCard() {
     sortProducts(event.target.value);
   };
 
-  // Function to sort products based on the current filter option
+  // Function to sort products based on the current filter option   
   const sortProducts = (filterOption) => {
     const sortedProducts = [...products].sort((a, b) => {
       if (filterOption === 'priceLowToHigh') {
@@ -144,7 +144,7 @@ function ProductCard() {
   return (
     <>
     <div className="filter-options">
-        <label htmlFor="filter">Filter:</label>
+        <label htmlFor="filter">Filter:</label>   
         <select id="filter" value={filterOption} onChange={handleFilterChange}>
           <option value="priceLowToHigh">Price Low to High</option>
           <option value="priceHighToLow">Price High to Low</option>
@@ -153,7 +153,7 @@ function ProductCard() {
       </div>
     <div className='Product-list-card'>
       {products.map(product => (
-        <div className="product" key={product.id}>
+        <div className="product" key={product.id}>   
           <div className="product-image">
             <img src={product.image} alt="Book Cover" />
             <span className="seller-tag inside" style={{backgroundColor: product.tag === 'Seller' ? '#EC9A78' : '#8878EC'}}>{product.tag}</span>
@@ -173,4 +173,4 @@ function ProductCard() {
   );
 }
 
-export default ProductCard;
+export default ProductCard;   

@@ -1,0 +1,99 @@
+.body{
+  width: 100%;
+  font-family: 'inter', sans-serif;
+}
+
+navbar{
+  width: 100%;
+}
+
+.Wishlist-container {
+  max-width: 100%;
+  padding: 5%;
+  box-sizing: border-box;
+  background: rgb(234, 233, 233);
+}
+
+h2{
+  margin-top: 3%;
+  font-size: x-large;
+}
+
+.wishlist {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: white;
+  border-radius: 1%;
+  padding-left: 5%;
+  gap: 5%;
+}
+
+/* Product Card Styles */
+.product-card {
+  background: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 18%;
+  padding: 2%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  margin-top: 5%;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.product-card p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.product-card button:first-of-type {
+  background-color: #dc3545;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 900px) {
+  .product-card {
+    width: 45%; /* Two cards per row with gap */
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+  .wishlist {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

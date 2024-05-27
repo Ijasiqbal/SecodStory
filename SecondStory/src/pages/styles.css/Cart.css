@@ -5,31 +5,31 @@ body {
 
 .cart-container {
   max-width: 50%;
-  margin-left: 8%;
-  margin-top: 1%;
-  padding: 1px;
-  border: 1px solid #ccc;
-  border-radius: 10px; 
-  background-color: white; 
+  margin-left: 8%;  
+  margin-top: 1%; 
+  padding: 1px; 
+  border: 1px solid #ccc; 
+  border-radius: 10px;   
+  background-color: white;  
 }
 
 .cart-container h1 {
-  font-weight: normal;
-  font-size: 120%;
-  padding: 2%;
+  font-weight: normal;   
+  font-size: 120%;   
+  padding: 2%;       
   margin-left: 2%; 
-  margin-top: 2%; 
+  margin-top: 2%;   
 }
 
 .cart-container hr {
-  margin-left: 3%;
+  margin-left: 3%;     
   margin-right: 3%;
 }
 
 .cart-item img {
   width: 20%;
   height: 30%;
-  padding-left: 5%;
+  padding-left: 5%;    
   padding-top: 1%;
 }
 
@@ -56,9 +56,10 @@ body {
 .summary-details p{
   font-size: 80%;
 }
-.summary-details input{
+
+.summary-details input[type=text1] {
   width: 40%;
-  height: 20%;
+  height: 20%; 
 }
 
 .ButtonA {
@@ -66,8 +67,8 @@ body {
   width: 40%;
   padding: 5px;
   margin-top: 5px;
-  background-color: green;
-  color: #fff;
+  background-color: green;  
+  color: #fff;  
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -99,7 +100,7 @@ body {
   color: rgb(49, 28, 28);
   margin-left: 10%;
   line-height:0%;
-  padding: 1%;
+  padding: 1%; 
   font-size: 80%;
 }
 
@@ -139,7 +140,6 @@ font-size: 100%;
 background: none;
 cursor: pointer;
 border: none;
-
 }
 
 .cart-item .icon-button:focus {    
@@ -152,7 +152,7 @@ outline: none;
     margin-left: 0;
     margin-top: 2%;
     padding: 5px;
-  }
+  } 
 
   .cart-container h1 {
     font-size: 100%;
@@ -162,7 +162,7 @@ outline: none;
 
   .cart-container hr {
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 5%; 
   }
 
   .cart-item img {
@@ -181,11 +181,10 @@ outline: none;
   }
 
 
-
   .order-summary {
     position: static; 
     width: 100%; 
-    margin: 5% 0;
+    margin: 5% 0;  
   }
 
   .summary-details {
@@ -193,7 +192,7 @@ outline: none;
   }
 
   .summary-details h4 {
-    font-size: 80%;
+    font-size: 80%; 
   }
 
-}
+}     
