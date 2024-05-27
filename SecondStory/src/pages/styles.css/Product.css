@@ -27,7 +27,7 @@ body {
 
 .card-heading {
     color: #393280;
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -54,6 +54,8 @@ body {
 }
 .product-paragraph{
     text-indent: 50px;
+    text-align: justify;
+    font-size: 15px;
 }
 /* Image Styles */
 .individual-product-details-img {
@@ -187,4 +189,10 @@ body {
     border: 0;
     height: 5px;
     background-color:  #F4F4F4;
+}
+
+@media (max-width: 400px) {
+    .individual-product-details-button {
+        margin-left: 30px;
+    }
 }

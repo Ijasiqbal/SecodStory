@@ -1,6 +1,5 @@
-// Login.js
 import React, { useState } from 'react';
-import './Login.css';
+import styles from './Login.module.css';
 import logo from '../../assets/SECOND.png';
 import facebook from '../../assets/facebook.png';
 import google from '../../assets/google.png';
@@ -23,45 +22,67 @@ function Login() {
   };
 
   return (
-    <div className='login-container'>
-      <div className="login-form-container">
-        <img src={logo} alt="SecondStory" className='SecondStory-logo'/>
+    <div className={styles.loginContainer}>
+      <div className={styles.loginFormContainer}>
+        <img src={logo} alt="SecondStory" className={styles.SecondStoryLogo} />
         <h2>SIGN IN</h2>
-        <div className="social-login">
-          <div className="social-icons">
-            <a href="#" className="social-icon" aria-label="Login with Facebook">
+        <div className={styles.socialLogin}>
+          <div className={styles.socialIcons}>
+            <a href="#" className={styles.socialIcon} aria-label="Login with Facebook">
               <img src={facebook} alt="Facebook" />
             </a>
-            <a href="#" className="social-icon" aria-label="Login with LinkedIn">
+            <a href="#" className={styles.socialIcon} aria-label="Login with LinkedIn">
               <img src={linkedin} alt="LinkedIn" />
             </a>
-            <a href="#" className="social-icon" aria-label="Login with Google">
+            <a href="#" className={styles.socialIcon} aria-label="Login with Google">
               <img src={google} alt="Gmail" />
             </a>
           </div>
           <p>Or login with:</p>
         </div>
-        <div>
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" required value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Email"/>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              className={styles.loginEmail}
+              aria-label="Email"
+            />
             <label htmlFor="password">Password:</label>
-            <input type={showPassword ? 'text' : 'password'} id="password" name="password" required value={password} onChange={(e) => setPassword(e.target.value)} aria-label="Password"/>
-            <div className="password-container">
-              <div className="show-password-container">
-                <div className='checkbox-container'>
-                  <input type="checkbox" id="show-password" checked={showPassword} onChange={togglePasswordVisibility} aria-label="Show Password"/>
-                  <label htmlFor="show-password" className='show-password-text'>Remember Me</label>
+            <input 
+              type={showPassword ? 'text' : 'password'} 
+              id="password" 
+              name="password" 
+              required 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+              className={styles.loginPassword}
+              aria-label="Password"
+            />
+            <div className={styles.passwordContainer}>
+              <div className={styles.showPasswordContainer}>
+                <div className={styles.checkboxContainer}>
+                  <input 
+                    type="checkbox" 
+                    id="showPassword" 
+                    checked={showPassword} 
+                    onChange={togglePasswordVisibility} 
+                    aria-label="Show Password"
+                  />
+                  <label htmlFor="showPassword" className={styles.showPasswordText}>RememberMe</label>
                 </div>
               </div>
-              <a href="/forgot-password" className="forgot-password">Forgot Password?</a>
+              <a href="/forgot-password" className={styles.forgotPassword}>Forgot Password?</a>
             </div>
-            <button type="submit" className='login-button'>Login</button>
-            <button type="button" className='register-button'>Register</button>
+            <button type="submit" className={styles.loginButton}>Login</button>
+            <button type="button" className={styles.registerButton}>Register</button>
           </div>
         </form>
-        </div>
       </div>
     </div>
   );

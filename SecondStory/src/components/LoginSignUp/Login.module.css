@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
-
-body {
+.body {
   margin: 0;
-    font-family: 'Inter', sans-serif;
-    width: 100%;
-    height: 100%;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  height: 100;
 }
 
-.login-container {
-  background-image: url(https://media.istockphoto.com/id/1302010598/photo/pen-and-paper.jpg?s=2048x2048&w=is&k=20&c=vd27G3aSg6saHOldPWwwctW4eLCSQr2F_21B_V3BdS8=);
+.loginContainer {
+  background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/arvrbg.png");
   height: 100vh;
   background-size: cover;
   display: flex;
@@ -18,19 +17,18 @@ body {
   align-items: center;
 }
 
-.login-form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f4f4;
-    padding: 50px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border-radius: 5px;
-    margin: 60px;
+.loginFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 5px;
 }
-  
-.SecondStory-logo {
+
+.SecondStoryLogo {
   max-width: 150px;
 }
 
@@ -39,30 +37,26 @@ h2 {
   color: #333;
 }
 
-.social-login {
+.socialLogin {
   text-align: center;
-  
 }
 
-.social-icons {
+.socialIcons {
   display: flex;
   justify-content: center;
- 
 }
 
-.social-icon {
+.socialIcon {
   margin: 0 0.5rem;
   display: inline-block;
 }
 
-.social-icon img {
+.socialIcon img {
   width: 40px;
   height: 40px;
 }
 
-
-
-.form-group {
+.formGroup {
   display: flex;
   flex-direction: column;
 }
@@ -71,65 +65,59 @@ label {
   color: #555;
 }
 
-input[type="email"],
-input[type="password"] {
+.loginEmail {
   padding: 0.50rem;
   margin-bottom: 0.50rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 13px;
   width: 300px;
-  
 }
 
-input[type="text"] {
+.loginPassword {
   padding: 0.50rem;
   margin-bottom: 0.50rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 13px;
-  width: none;
-  
 }
 
-
-.password-container {
+.passwordContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.show-password-container {
+.showPasswordContainer {
   display: flex;
   align-items: center;
 }
 
-
-.checkbox-container {
+.checkboxContainer {
   display: flex;
   align-items: center;
 }
 
-.checkbox-container input {
+.checkboxContainer input {
   margin-right: 0.5rem;
 }
 
-.show-password-text{
+.showPasswordText {
   font-size: 10px;
 }
 
-.forgot-password {
+.forgotPassword {
   text-decoration: none;
   color: #007bff;
   font-size: 0.9rem;
 }
 
-.forgot-password:hover {
+.forgotPassword:hover {
   text-decoration: underline;
 }
 
-.login-button,
-.register-button {
+.loginButton,
+.registerButton {
   padding: 0.50rem;
   margin: 0.5rem 0;
   border: none;
@@ -139,73 +127,58 @@ input[type="text"] {
   max-width: 358px;
 }
 
-.login-button {
+.loginButton {
   background-color: #007bff;
   color: white;
 }
 
-.login-button:hover {
+.loginButton:hover {
   background-color: #0056b3;
 }
 
-.register-button {
+.registerButton {
   background-color: #6c757d;
   color: white;
 }
 
-.register-button:hover {
+.registerButton:hover {
   background-color: #5a6268;
-} 
-
+}
 
 @media (max-width: 768px) {
-  .login-container {
+  .loginContainer {
     padding: 20px;
   }
 
-  .login-form-container {
+  .loginFormContainer {
     padding: 30px;
     box-shadow: none;
     background-color: rgba(244, 244, 244, 0.9); /* Slightly transparent background */
   }
 
-  input[type="email"],
-  input[type="password"] {
+  .loginEmail,
+  .loginPassword {
     width: 250px;
   }
 
-  input[type="text"] {
-    width: none;
-    
-  }
-
-  .login-button,
-  .register-button {
+  .loginButton,
+  .registerButton {
     width: 100%;
-  }
-  .forgot-password {
-    font-size: 10px;
   }
 }
 
-
 @media (max-width: 355px) {
-  .login-form-container {
+  .loginFormContainer {
     padding: 20px;
   }
-
-  input[type="email"],
-  input[type="password"] {
+  .loginEmail,
+  .loginPassword {
     width: 200px;
     font-size: 12px;
   }
-  input[type="text"] {
-    width: none;
-    
-  }
 
-  .login-button,
-  .register-button {
+  .loginButton,
+  .registerButton {
     width: 100%;
     padding: 0.4rem;
     font-size: 0.9rem;

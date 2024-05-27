@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faUser, faEdit, faHeart, faMapMarkerAlt, faBox, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import Shelf from '../components/Dashboarditems/Shelf/Shelf'
 import Profile from '../components/Dashboarditems/Profile/Profile'
+import Address from '../components/Dashboarditems/Address/Address';
 
 function Dashboard() {
   const [activeSection, setActiveSection] = useState('Shelf');
@@ -36,6 +37,7 @@ function Dashboard() {
         </div>
         <div className={`content-section ${activeSection === 'Address' ? 'active' : ''}`}>
           <h1 className='shelf-content'>Address Content</h1>
+          <Address/>
         </div>
         <div className={`content-section ${activeSection === 'Orders' ? 'active' : ''}`}>
           <h1 className='shelf-content'>Orders Content</h1>
