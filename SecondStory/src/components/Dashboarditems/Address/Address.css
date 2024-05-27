@@ -1,0 +1,149 @@
+/* General container styling */
+.address-container {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Button for toggling the form visibility */
+  .add-a-new-address {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-a-new-address:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Form styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form button.add-address {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .form button.add-address:hover {
+    background-color: #218838;
+  }
+  
+  /* Address list and items */
+  .address-list {
+    margin-top: 20px;
+  }
+  
+  .address-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    align-items: center;
+  }
+  
+  .address-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .address-details h4 {
+    margin: 0;
+  }
+  
+  .address-details p {
+    margin: 5px 0;
+  }
+  
+  /* Buttons for edit and delete */
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .buttons button:first-child {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .buttons button:first-child:hover {
+    background-color: #e0a800;
+  }
+  
+  .buttons button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .buttons button:last-child:hover {
+    background-color: #c82333;
+  }
+  
+  /* Individual form editing */
+  .individual-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .individual-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .individual-form button {
+    align-self: flex-start;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .individual-form button:hover {
+    background-color: #218838;
+  }
+  
