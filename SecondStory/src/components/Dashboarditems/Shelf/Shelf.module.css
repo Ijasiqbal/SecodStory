@@ -1,4 +1,6 @@
 .base{
+    width: 85%;
+    margin: 0 auto;
 }
 
 .shelf1{
@@ -6,10 +8,8 @@
     img{
         width: 100%;
     }
+    
 }
-.row{
-    position: absolute;
-    bottom: 30px;
-    padding-left: 5%;
+.row1{
     
 }
