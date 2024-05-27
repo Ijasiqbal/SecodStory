@@ -11,7 +11,7 @@
   }
   
   /* Button for toggling the form visibility */
-  .address-container > button {
+  .add-a-new-address {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -22,7 +22,7 @@
     cursor: pointer;
   }
   
-  .address-container > button:hover {
+  .add-a-new-address:hover {
     background-color: #0056b3;
   }
   
@@ -45,7 +45,7 @@
     border-radius: 5px;
   }
   
-  .form button {
+  .form button.add-address {
     padding: 10px;
     font-size: 1em;
     border: none;
@@ -55,7 +55,7 @@
     cursor: pointer;
   }
   
-  .form button:hover {
+  .form button.add-address:hover {
     background-color: #218838;
   }
   
@@ -146,3 +146,4 @@
   .individual-form button:hover {
     background-color: #218838;
   }
+  

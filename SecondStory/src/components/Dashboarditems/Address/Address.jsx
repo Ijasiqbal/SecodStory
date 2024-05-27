@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, TextField, Container, Typography, Box, Paper } from '@mui/material';
+import './Address.css';
 
 function Address() {
   const [addresses, setAddresses] = useState([]);
@@ -22,8 +22,10 @@ function Address() {
 
   const handleAdd = () => {
     if (editIndex !== null) {
+      // No need for update logic, as we're only adding new addresses
       setEditIndex(null);
     } else {
+      // Add new address
       setAddresses([...addresses, form]);
       setForm({
         fullName: '',
@@ -34,14 +36,14 @@ function Address() {
         city: '',
         state: ''
       });
-      setShowForm(false);
+      setShowForm(false); // Hide the form after adding a new address
     }
   };
 
   const handleEdit = (index) => {
     setForm(addresses[index]);
     setEditIndex(index);
-    setShowForm(false);
+    setShowForm(false); // Hide the main form when editing individual address
   };
 
   const handleDelete = (index) => {
@@ -62,163 +64,133 @@ function Address() {
   };
 
   return (
-    <Container>
-      <Typography variant="h4" component="h1" gutterBottom>
-        Manage Addresses
-      </Typography>
-      <Paper>
-      <Box mb={2}>
-        <Button variant="contained" color="primary" onClick={() => setShowForm(!showForm)}>
+    <>
+      <h1>Manage Addresses</h1>
+      <div className="address-container">
+        < div className="form">
+        <button className="add-a-new-address" onClick={() => setShowForm(!showForm)}>
           {showForm ? 'Hide Form' : 'ADD A NEW ADDRESS'}
-        </Button>
-      </Box>
-      {showForm && (
-        <Typography elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
-          <TextField
-            fullWidth
-            label="Full Name"
-            name="fullName"
-            value={form.fullName}
-            onChange={handleChange}
-            margin="normal"
-          />
-          <TextField
-            fullWidth
-            label="Phone Number"
-            name="phoneNumber"
-            value={form.phoneNumber}
-            onChange={handleChange}
-            margin="normal"
-          />
-          <TextField
-            fullWidth
-            label="Pincode"
-            name="pincode"
-            value={form.pincode}
-            onChange={handleChange}
-            margin="normal"
-          />
-          <TextField
-            fullWidth
-            label="Address Line 1"
-            name="addressLine1"
-            value={form.addressLine1}
-            onChange={handleChange}
-            margin="normal"
-          />
-          <TextField
-            fullWidth
-            label="Address Line 2"
-            name="addressLine2"
-            value={form.addressLine2}
-            onChange={handleChange}
-            margin="normal"
-          />
-          <TextField
-            fullWidth
-            label="City"
-            name="city"
-            value={form.city}
-            onChange={handleChange}
-            margin="normal"
-          />
-          <TextField
-            fullWidth
-            label="State"
-            name="state"
-            value={form.state}
-            onChange={handleChange}
-            margin="normal"
-          />
-          <Button variant="contained" color="primary" onClick={handleAdd}>
-            Add Address
-          </Button>
-        </Typography>
-      )}
-      </Paper>
-      <div className="address-list">
-        {addresses.map((addr, index) => (
-          <Paper key={index} elevation={3} style={{ padding: '16px', marginBottom: '16px' }}>
-            {editIndex !== index && (
-              <Box>
-                <Typography variant="h6">{addr.fullName + " " + addr.phoneNumber}</Typography>
-                <Typography variant="body1">{addr.addressLine1 + ", " + addr.addressLine2 + ", " + addr.city + ", " + addr.state}</Typography>
-                <Typography variant="body1">{addr.pincode}</Typography>
-                <Button variant="contained" color="primary" onClick={() => handleEdit(index)}>
-                  Edit
-                </Button>
-                <Button variant="contained" color="secondary" onClick={() => handleDelete(index)} style={{ marginLeft: '8px' }}>
-                  Delete
-                </Button>
-              </Box>
-            )}
-            {editIndex === index && (
-              <Box className="individual-form">
-                <TextField
-                  fullWidth
-                  label="Full Name"
-                  name="fullName"
-                  value={addr.fullName}
-                  onChange={(e) => handleIndividualEditChange(index, e)}
-                  margin="normal"
-                />
-                <TextField
-                  fullWidth
-                  label="Phone Number"
-                  name="phoneNumber"
-                  value={addr.phoneNumber}
-                  onChange={(e) => handleIndividualEditChange(index, e)}
-                  margin="normal"
-                />
-                <TextField
-                  fullWidth
-                  label="Pincode"
-                  name="pincode"
-                  value={addr.pincode}
-                  onChange={(e) => handleIndividualEditChange(index, e)}
-                  margin="normal"
-                />
-                <TextField
-                  fullWidth
-                  label="Address Line 1"
-                  name="addressLine1"
-                  value={addr.addressLine1}
-                  onChange={(e) => handleIndividualEditChange(index, e)}
-                  margin="normal"
-                />
-                <TextField
-                  fullWidth
-                  label="Address Line 2"
-                  name="addressLine2"
-                  value={addr.addressLine2}
-                  onChange={(e) => handleIndividualEditChange(index, e)}
-                  margin="normal"
-                />
-                <TextField
-                  fullWidth
-                  label="City"
-                  name="city"
-                  value={addr.city}
-                  onChange={(e) => handleIndividualEditChange(index, e)}
-                  margin="normal"
-                />
-                <TextField
-                  fullWidth
-                  label="State"
-                  name="state"
-                  value={addr.state}
-                  onChange={(e) => handleIndividualEditChange(index, e)}
-                  margin="normal"
-                />
-                <Button variant="contained" color="primary" onClick={handleIndividualEditSave}>
-                  Save
-                </Button>
-              </Box>
-            )}
-          </Paper>
-        ))}
+        </button>
+        {showForm && (
+          <div >
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              value={form.fullName}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="phoneNumber"
+              placeholder="Phone Number"
+              value={form.phoneNumber}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="pincode"
+              placeholder="Pincode"
+              value={form.pincode}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="addressLine1"
+              placeholder="Address Line 1"
+              value={form.addressLine1}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="addressLine2"
+              placeholder="Address Line 2"
+              value={form.addressLine2}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="city"
+              placeholder="City"
+              value={form.city}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="state"
+              placeholder="State"
+              value={form.state}
+              onChange={handleChange}
+            />
+            <button className="add-address" onClick={handleAdd}>
+              Add Address
+            </button>
+          </div>
+        )}
+        </div>
+        <div className="address-list">
+          {addresses.map((addr, index) => (
+            <div key={index} className="address-item">
+              {editIndex !== index && (
+              <div>
+                <h4>{addr.fullName} {addr.phoneNumber}</h4>
+                <p>{addr.addressLine1} {addr.addressLine2} {addr.city} {addr.state} - {addr.pincode}</p>
+                <button onClick={() => handleEdit(index)}>Edit</button>
+                <button onClick={() => handleDelete(index)}>Delete</button>
+              </div>
+              )}
+              {editIndex === index && (
+                <div className="individual-form">
+                  <input
+                    type="text"
+                    name="fullName"
+                    value={addr.fullName}
+                    onChange={(e) => handleIndividualEditChange(index, e)}
+                  />
+                  <input
+                    type="text"
+                    name="phoneNumber"
+                    value={addr.phoneNumber}
+                    onChange={(e) => handleIndividualEditChange(index, e)}
+                  />
+                  <input
+                    type="text"
+                    name="pincode"
+                    value={addr.pincode}
+                    onChange={(e) => handleIndividualEditChange(index, e)}
+                  />
+                  <input
+                    type="text"
+                    name="addressLine1"
+                    value={addr.addressLine1}
+                    onChange={(e) => handleIndividualEditChange(index, e)}
+                  />
+                  <input
+                    type="text"
+                    name="addressLine2"
+                    value={addr.addressLine2}
+                    onChange={(e) => handleIndividualEditChange(index, e)}
+                  />
+                  <input
+                    type="text"
+                    name="city"
+                    value={addr.city}
+                    onChange={(e) => handleIndividualEditChange(index, e)}
+                  />
+                  <input
+                    type="text"
+                    name="state"
+                    value={addr.state}
+                    onChange={(e) => handleIndividualEditChange(index, e)}
+                  />
+                  <button onClick={handleIndividualEditSave}>Save</button>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </Container>
+    </>
   );
 }
 

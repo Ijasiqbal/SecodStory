@@ -1,34 +1,79 @@
-import React from 'react';
-import styles from './Shelf.module.css';
+import styles from './Shelf.module.css'
+import shelf from '../../../assets/shelf.jpg'
+import shelf1 from '../../../assets/singleshelf.jpg'
+import shelf2 from '../../../assets/shelf2.jpg'
+import shelf3 from '../../../assets/shelf3.jpg'
+import AddBook from './AddBook'
+import ShelfBook from './ShelfBook'
+import book1 from '../../../assets/f3.jpg'
+import book2 from '../../../assets/f2.jpg'
+import { useState } from 'react'
+import Row from './Row'
 
+export default function Shelf() {
 
-const books = [
-  { img: 'https://m.media-amazon.com/images/I/813aV273-rL._SL1500_.jpg', alt: 'Win Friends and Influence People' },
-  { img: 'https://m.media-amazon.com/images/I/813aV273-rL._SL1500_.jpg', alt: 'The Subtle Art of Not Giving a F*ck' },
-  { img: 'https://m.media-amazon.com/images/I/813aV273-rL._SL1500_.jpg', alt: 'Rich Dad Poor Dad' },
-  { img: 'https://m.media-amazon.com/images/I/813aV273-rL._SL1500_.jpg', alt: 'The Intelligent Investor' },
-];
+  const [books, setBooks] = useState([
+    {
+      id: 1,
+      title: "Book Title 1",
+      author: "Author Name 1",
+      image: book1
+    },
+    {
+      id: 2,
+      title: "Book Title 2",
+      author: "Author Name 2",
+      image: book2
+    },
+    {
+      id: 3,
+      title: "Book Title 3",
+      author: "Author Name 3",
+      image: book1
+    },
+    {
+      id: 4,
+      title: "Book Title 4",
+      author: "Author Name 4",
+      image: book2
+    },
+    {
+      id: 5,
+      title: "Book Title 5",
+      author: "Author Name 5",
+      image: book1
+    }
+    // Add more books as needed
+  ]);
 
-const Shelf = () => {
+  
   return (
-    <div className={styles.bookshelf}>
-      {['To sell', 'To lend', 'To keep'].map((label, index) => (
-        <div key={index} className={styles.shelf}>
-          <div className={styles.label}>{label}</div>
-          <div className={styles.navArrow}>&lt;</div>
-          <div className={styles.books}>
-            {books.map((book, idx) => (
-              <div key={idx} className={styles.book}>
-                <img src={book.img} alt={book.alt} />
-              </div>
-            ))}
-            <div className={styles.placeholder}>+</div>
-          </div>
-          <div className={styles.navArrow}>&gt;</div>
+    <div className={styles.base}>
+      <div className={styles.shelf1}>
+        <img src={shelf1} alt='shelf1' className={styles.shelf1img} />
+        <div className={styles.row1}>
+          <Row 
+          books={books}
+          />
         </div>
-      ))}
+      </div>
+      <div className={styles.shelf1}>
+        <img src={shelf2} alt='shelf1' className={styles.shelf1img} />
+          <div className={styles.row2}>
+            <Row 
+            books={books}
+            />
+          </div>
+      </div>
+      <div className={styles.shelf1}>
+        <img src={shelf3} alt='shelf1' className={styles.shelf1img} />
+        <div className={styles.row3}>
+          <Row 
+          books={books}
+          />
+        </div>
+      </div>
+      
     </div>
-  );
-};
-
-export default Shelf;
+  )
+}

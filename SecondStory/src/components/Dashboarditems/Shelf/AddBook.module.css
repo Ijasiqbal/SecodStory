@@ -1,0 +1,20 @@
+.base{
+    width: 100px;
+    height: 135px;
+    border: 1px dotted white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+    z-index: 101;
+    background-color: rgba(255, 255, 255, 0.11);
+}
+.plus{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.259);
+
+}
+
+

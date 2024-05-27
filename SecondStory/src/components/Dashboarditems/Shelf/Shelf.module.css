@@ -1,65 +1,15 @@
-.bookshelf {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: 800px;
-    background-image: url('../../../assets/wooden-book-shelf.jpg'); /* Path to your wooden texture image */
-    background-size: cover; /* Ensures the image covers the entire div */
-    background-repeat: no-repeat;
-  }
-  
-  .shelf {
-    display: flex;
-    align-items: center;
-     /* Prevents the image from repeating */
-  }
-  
-  .label {
-    width: 69px; 
-    height: 70px;
-    padding: 30px;
-    margin-right: 20px;
-    font-weight: bold;
-    background:  url('../../../assets/note-paper-clip.png'); /* Path to your background image for the label */
-    background-size: cover; /* Ensures the background image covers the label */
-    
-  }
-  
-  .books {
-    display: flex;
-    gap: 10px;
-    flex-grow: 1;
-  }
-  
-  .book {
-    width: 100px;
-    height: 150px;
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ccc;
+.base{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.shelf1{
     position: relative;
-  }
-  
-  .book img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  .placeholder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 150px;
-    border: 2px dashed #ccc;
-  }
-  
-  .navArrow {
-    cursor: pointer;
-    font-size: 24px;
-    user-select: none;
-  }
-  
+    img{
+        width: 100%;
+    }
+    
+}
+.row1{
+    
+}

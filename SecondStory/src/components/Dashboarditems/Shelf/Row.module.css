@@ -1,0 +1,10 @@
+.row{
+    position: absolute;
+    bottom: -65px;
+    padding-left: 5%;
+    display: flex;
+    z-index: 99; 
+}
+svg{
+    
+}

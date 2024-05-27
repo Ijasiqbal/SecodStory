@@ -1,29 +1,55 @@
-import React from 'react'
-import './style.css/Navbar.css'
-import logo from '../assets/logo.png'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './style.css/Navbar.css';
+import logo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faHeart, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faHeart, faShoppingCart, faUser, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
-export default function Navbar() {
+const Navbar = () => {
+    const [click, setClick] = useState(false);
 
-    
-  return (
-    <div className='base'>
-      <div className="brand" onClick={()=>{window.location.href="/"}}><i><img src={logo} alt="logo" /></i>SecondStory</div>
-        <div className='nav'>
-                <ul>Home</ul>
-                <ul>Community</ul>
-                <ul onClick={()=>{window.location.href='/product'}}>Market</ul>
-        </div>
-        <div className="search">
-            <p>Search for books</p>
-            <i><FontAwesomeIcon icon={faSearch} /></i>
-        </div>
-        <div className="icons">
-            <i><FontAwesomeIcon icon={faHeart} /></i>  {/* Wishlist icon */}
-            <i><FontAwesomeIcon icon={faShoppingCart} onClick={()=>{window.location.href="/cart"}} /></i>  {/* Cart icon */}
-            <i><FontAwesomeIcon icon={faUser} /></i>  {/* Profile icon */}
-        </div>
-    </div>
-  )
+    const handleClick = () => setClick(!click);
+
+    return (
+        <nav className="navbar">
+            <div className="logo">
+                <Link to='/'><img src={logo} alt="logo" /></Link>
+                <Link to='/'><h2>SecondStory</h2></Link>
+            </div>
+            <div className="navLinks">
+                <Link to='/'>Home</Link>
+                <Link to='/community'>Community</Link>
+                <Link to='/product'>Market</Link>
+            </div>
+            <div className="searchInput">
+                <input type="text" name="" id="" placeholder='Search for books' />
+            </div>
+            <div className="icon-grp">
+                <Link to='/wishlist' className='mobileNone' >
+                    <FontAwesomeIcon icon={faHeart} />
+                </Link>
+                <Link to='/cart'>
+                    <FontAwesomeIcon icon={faShoppingCart} />
+                </Link>
+                <Link to='/dashboard' className='mobileNone'>
+                    <FontAwesomeIcon icon={faUser} />
+                </Link>
+            </div>
+            <div className="menu">
+                <FontAwesomeIcon icon={click ? faTimes : faBars} onClick={handleClick} />
+            </div>
+            <div className="">
+                <div className={click ? 'openNav' : 'none1'}>
+                    <Link to='/'>Home</Link>
+                    <Link to='/community'>Community</Link>
+                    <Link to='/product'>Market</Link>
+                    <Link to='/'>Wishlist</Link>
+                    <Link to='/dashboard'>Profile</Link>
+                    <Link to='/'>Logout</Link>
+                </div>
+            </div>
+        </nav>
+    );
 }
+
+export default Navbar;
