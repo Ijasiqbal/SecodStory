@@ -80,7 +80,7 @@ function Login() {
               <a href="/forgot-password" className={styles.forgotPassword}>Forgot Password?</a>
             </div>
             <button type="submit" className={styles.loginButton}>Login</button>
-            <button type="button" className={styles.registerButton}>Register</button>
+            <button type="button" className={styles.registerButton} onClick={()=>{window.location.href='/create-account'}}>Register</button>
           </div>
         </form>
       </div>
