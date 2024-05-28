@@ -1,0 +1,80 @@
+/* Container styling */
+.orders-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .orders-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .order-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .order-id,
+  .order-product,
+  .order-quantity,
+  .order-price,
+  .order-status {
+    font-size: 16px;
+  }
+  
+  .order-status {
+    font-weight: bold;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .orders-container {
+      padding: 15px;
+    }
+  
+    .order-details {
+      font-size: 14px;
+    }
+  
+    .order-item {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .orders-container {
+      padding: 10px;
+    }
+  
+    .orders-container h1 {
+      font-size: 1.5em;
+    }
+  
+    .order-details {
+      font-size: 12px;
+    }
+  
+    .order-item {
+      padding: 8px;
+    }
+  }
+  

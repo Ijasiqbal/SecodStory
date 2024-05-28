@@ -1,0 +1,163 @@
+/* Profile.css */
+
+/* General styles */
+.profile-container {
+  max-width: 900px; 
+  margin: auto;
+  padding: 20px 100px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.profile-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profile-container-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  position: relative;
+}
+
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+
+.upload-icon {
+ 
+  position: absolute;
+    bottom: 16px;
+    right: 5px;
+    /* background-color: white; */
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 50%;
+    /* height: 20px; */
+    cursor: pointer;
+}
+
+
+.upload-icon:hover {
+  color: #0056b3;
+}
+
+.profile-text-container{
+  width: 100%;
+  margin: auto;
+  padding: 20px 100px;
+  background-color: #ebe9e9;
+  border-radius: 10px;
+}
+.profile-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-field label {
+  width: 150px;
+  font-weight: bold;
+  color: #555;
+}
+
+.profile-field p {
+  flex: 1;
+}
+
+.profile-field input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.edit-icon {
+  margin-left: 30px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  color: #0056b3;
+}
+
+.save-button {
+  margin-left: 30px;
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #218838;
+}
+
+
+@media (max-width: 1000px) {
+  .profile-container {
+    padding: 10px;
+  }
+
+  .profile-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile-image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-field label {
+    width: 120px;
+  }
+
+  .profile-field p,
+  .profile-field input {
+    font-size: 12px;
+  }
+
+  .upload-icon {
+    padding: 3px;
+  }
+
+  .save-button {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+
+  .edit-icon,
+  .save-button {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    
+    padding: 0;
+    background-color: white;
+   
+  }
+  .profile-text-container {
+    width: 100%;
+    margin: auto;
+    padding: 10px 30px;
+    background-color: #ebe9e9;
+    border-radius: 10px;
+}
+}

@@ -41,11 +41,11 @@ const Product = () => {
                 </div>
                 <p>Author: Colleen Hoover <span className='individual-product-Auther-span'>||</span> SKU: 9781501110368</p>
                 <hr className='hr-line'/>
-                <p>It Ends with Us” by Colleen Hoover is a deeply moving novel about the complexities of love faced with the harsh realities of domestic violence. Following Lily Bloom’s journey, the story reveals the resilience needed to confront painful truths and make empowering choices. Hoover’s narrative is raw, compelling, and ultimately a testament to the strength of the human spirit in the pursuit of happiness and self-respect.</p>
+                <p className='product-paragraph'>It Ends with Us” by Colleen Hoover is a deeply moving novel about the complexities of love faced with the harsh realities of domestic violence. Following Lily Bloom’s journey, the story reveals the resilience needed to confront painful truths and make empowering choices. Hoover’s narrative is raw, compelling, and ultimately a testament to the strength of the human spirit in the pursuit of happiness and self-respect.</p>
                 <div className='individual-product-details-Price-Section'>
                   <div>
                     <p className='individual-product-details-Price'>$20.00  <span className='individual-product-details-Price-small individual-product-details-text-decoration'> $20.00</span></p>
-                    <button className='individual-product-details-button'>BUY NOW</button>
+                    <button className='individual-product-details-button'>BUYNOW</button>
                   </div>
                   <hr className='hr-line'/>
                   <div>

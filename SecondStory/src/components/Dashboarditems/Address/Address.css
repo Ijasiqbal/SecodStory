@@ -1,0 +1,147 @@
+/* General container styling */
+.address-manager-container {
+  max-width: 900px; 
+  margin: auto;
+  padding: 20px 100px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.address-container {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+
+
+  .form-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .form-button {
+
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .add-a-new-address {
+    background-color: #000;
+    font-size: 13px;
+  }
+  
+  .add-a-new-right {
+    color: #dc3545;
+  }
+  
+  .add-a-new-address:hover {
+    background-color: gray;
+  }
+  
+  /* Form styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-address {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .form button.add-address:hover {
+    background-color: gray;
+  }
+  
+  /* Address list and items */
+  .address-list {
+    margin-top: 20px;
+  }
+  
+  .address-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0px;
+    background-color: #fff;
+    align-items: center;
+  }
+  
+  .address-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .address-details h4 {
+    margin: 0;
+  }
+  
+  .address-details p {
+    margin: 5px 0;
+  }
+  
+  
+.address-list-edit,
+.address-list-delete {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.address-list-edit {
+  background-color: #000;
+  color: white;
+}
+
+.address-list-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.address-list-edit:hover {
+  background-color: gray;
+}
+
+.address-list-delete:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .address-manager-container {
+    
+    padding: 0;
+    background-color: white;
+   
+  }
+}

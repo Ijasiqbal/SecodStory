@@ -1,0 +1,183 @@
+/* SignUp.module.css */
+
+/* Base styles */
+.signup-container {
+  background-image: url("https://wallpapers.com/images/high/bulbs-along-shelves-filled-with-books-h99zik512sz2yilk.webp");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 30px;
+  margin: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 5px;
+}
+
+.SecondStoryLogo {
+  max-width: 150px;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.social-SignUp {
+  text-align: center;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcon {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.socialIcon img {
+  width: 40px;
+  height: 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-names {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.form-group-column {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  padding: 0.50rem;
+  margin-bottom: 0.50rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 13px;
+  width: 100%;
+}
+
+.Signup-username,
+.Signup-email,
+.Signup-password,
+.Signup-confirmPassword {
+  width: 100%;
+}
+
+.Signup-firstName,
+.Signup-lastName {
+  width: 150px;
+}
+
+.show-password-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-right: 0.5rem;
+}
+
+.show-password-text {
+  font-size: 10px;
+}
+
+.signup-button {
+  padding: 0.50rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+/* Media queries */
+@media (max-width: 500px) {
+  .SecondStory-logo {
+    max-width: 50px;
+  }
+
+  .signup-form-container {
+    padding: 20px;
+  }
+
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .form-group-names {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .Signup-username,
+  .Signup-email,
+  .Signup-password,
+  .Signup-confirmPassword {
+    width: 300px;
+  }
+
+  .Signup-firstName,
+  .Signup-lastName {
+    width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .SecondStory-logo {
+    display: none;
+  }
+
+  .signup-form-container {
+    padding: 20px;
+  }
+
+  .Signup-username,
+  .Signup-email,
+  .Signup-password,
+  .Signup-confirmPassword {
+    width: 200px;
+  }
+
+  .Signup-firstName,
+  .Signup-lastName {
+    width: 200px;
+  }
+}

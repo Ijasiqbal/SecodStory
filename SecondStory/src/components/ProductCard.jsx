@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.css/ProductCard.css';
+import styles from './style.css/ProductCard.module.css';
 
 function ProductCard() {
   // Sample product data
@@ -143,32 +143,39 @@ function ProductCard() {
 
   return (
     <>
-    <div className="filter-options">
-        <label htmlFor="filter">Filter:</label>   
+    <div className={styles['filter-options']}>
+      <h4>Community Deals:</h4>
+      <div>
+        <label htmlFor="filter">Filter:</label>
         <select id="filter" value={filterOption} onChange={handleFilterChange}>
           <option value="priceLowToHigh">Price Low to High</option>
           <option value="priceHighToLow">Price High to Low</option>
-          {/* Add more filtering options here */}
         </select>
       </div>
-    <div className='Product-list-card'>
+    </div>
+    <div className={styles['Product-list-card']}>
       {products.map(product => (
-        <div className="product" key={product.id}>   
-          <div className="product-image">
+        <div className={styles.product} key={product.id}>
+          <div className={styles['product-image']}>
             <img src={product.image} alt="Book Cover" />
-            <span className="seller-tag inside" style={{backgroundColor: product.tag === 'Seller' ? '#EC9A78' : '#8878EC'}}>{product.tag}</span>
+            <span
+              className={styles['seller-tag']}
+              style={{ backgroundColor: product.tag === 'Seller' ? '#EC9A78' : '#8878EC' }}
+            >
+              {product.tag}
+            </span>
           </div>
           <div>
-            <h2 className="book-name">{product.name}</h2>
-            <div className="author-price">
-              <p className="author-name">{product.author}</p>
-              <p className="price">RS:{product.price}</p>
+            <h2 className={styles['book-name']}>{product.name}</h2>
+            <div className={styles['author-price']}>
+              <p className={styles['author-name']}>{product.author}</p>
+              <p className={styles.price}>RS:{product.price}</p>
             </div>
           </div>
         </div>
       ))}
     </div>
-    </>
+  </>
     
   );
 }

@@ -54,6 +54,7 @@ export default function Shelf() {
         <div className={styles.row1}>
           <Row 
           books={books}
+          category="To Sell"
           />
         </div>
       </div>
@@ -62,14 +63,16 @@ export default function Shelf() {
           <div className={styles.row2}>
             <Row 
             books={books}
+            category="To Lend"
             />
           </div>
       </div>
       <div className={styles.shelf1}>
-        <img src={shelf3} alt='shelf1' className={styles.shelf1img} />
+        <img src={shelf2} alt='shelf1' className={styles.shelf1img} />
         <div className={styles.row3}>
           <Row 
           books={books}
+          category="To Keep"
           />
         </div>
       </div>
