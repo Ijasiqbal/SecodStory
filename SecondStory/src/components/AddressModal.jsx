@@ -1,6 +1,6 @@
 // src/components/AddressModal.js
 import React, { useState } from 'react';
-import './styles.css/AddressModal.css';
+import '../components/style.css/AddressBox.css';
 
 const AddressModal = ({ onClose, onSave, currentAddress }) => {
   const [address, setAddress] = useState(currentAddress);
@@ -19,6 +19,14 @@ const AddressModal = ({ onClose, onSave, currentAddress }) => {
       <div className="modal-content">
         <h2>Change Address</h2>
         <div className="modal-body">
+        <label>
+            Full Name:
+            <input type="text" name="name" value={address.name} onChange={handleChange} />
+          </label>
+          <label>
+            Phone Number:
+            <input type="text" name="number" value={address.phoneno} onChange={handleChange} />
+          </label>
           <label>
             Address Line 1:
             <input type="text" name="line1" value={address.line1} onChange={handleChange} />

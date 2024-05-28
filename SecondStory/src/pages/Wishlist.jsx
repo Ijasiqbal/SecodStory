@@ -12,19 +12,19 @@ import w9 from '../assets/w9.jpg';
 import './styles.css/Wishlist.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const initialWishlist = [
-  { id: 1, name: 'Angles', price: 'Rs. 200', image: w1},
-  { id: 2, name: 'Acid Row', price: 'Rs. 280', image: w2 },
-  { id: 3, name: 'Bag of Bones', price: 'Rs. 300', image: w3 }, 
-  { id: 4, name: 'One of us know', price: 'Rs. 400', image: w4 },
-  { id: 5, name: 'A short walk', price: 'Rs. 360', image: w5},
-  { id: 6, name: 'Ghost Station', price: 'Rs. 400', image: w6},
-  { id: 7, name: 'A sweet sting of salt', price: 'Rs. 270', image: w7},
-  { id: 8, name: 'Education in malice', price: 'Rs. 450', image: w8},
-  { id: 9, name: 'Dangerous game', price: 'Rs. 290', image: w9},
-]; 
+  { id: 1, name: 'Angles', originalPrice: 250, discountedPrice: 200, image: w1 },
+  { id: 2, name: 'Acid Row', originalPrice: 320, discountedPrice: 280, image: w2 },
+  { id: 3, name: 'Bag of Bones', originalPrice: 350, discountedPrice: 300, image: w3 },
+  { id: 4, name: 'One of us', originalPrice: 450, discountedPrice: 400, image: w4 },
+  { id: 5, name: 'A short walk', originalPrice: 400, discountedPrice: 360, image: w5 },
+  { id: 6, name: 'Ghost Station', originalPrice: 450, discountedPrice: 400, image: w6 },
+  { id: 7, name: 'A sweet sting', originalPrice: 300, discountedPrice: 270, image: w7 },
+  { id: 8, name: 'Education', originalPrice: 500, discountedPrice: 450, image: w8 },
+  { id: 9, name: 'Dangerous', originalPrice: 320, discountedPrice: 290, image: w9 },
+];
 
 function Wishlist() {
   const [wishlist, setWishlist] = useState(initialWishlist); 
@@ -42,29 +42,33 @@ function Wishlist() {
 
   return (
     <>
-    <Navbar/>
-    <div className="Wishlist-container"> 
-      <h2>My Wishlist</h2> 
-      <div className="wishlist">
-        {wishlist.length === 0 ? (
-          <p>Your wishlist is empty</p> 
-        ) : (
-          wishlist.map((product) => ( 
-            <div key={product.id} className="product-card"> 
-              <img src={product.image} alt={product.name} />
-              <p>{product.name}</p> 
-              <h3>{product.price}</h3>
-              <button onClick={() => handleRemoveFromWishlist(product)}>
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
-              <button onClick={() => handleAddToCart(product)}>
-                Add to Cart  
-              </button>
-            </div> 
-          ))
-        )}
+      <Navbar />
+      <div className="Wishlist-container">
+        <h2>My Wishlist</h2>
+        <div className="wishlist">
+          {wishlist.length === 0 ? (
+            <p>Your wishlist is empty</p>
+          ) : (
+            wishlist.map((product) => (
+              <div key={product.id} className="product-card">
+                <img src={product.image} alt={product.name} />
+                <p>{product.name}</p>
+                <div className="prices">
+                  <h3 className="original-price">Rs. {product.originalPrice}</h3>
+                  <h3 className="discounted-price">Rs. {product.discountedPrice}/-</h3>
+                </div>
+                <button onClick={() => handleRemoveFromWishlist(product)}>
+                  <FontAwesomeIcon icon={faTimes} />
+                </button>
+                <button onClick={() => handleAddToCart(product)} className='icon1'>
+                  Add to Cart
+                  <FontAwesomeIcon icon={faShoppingCart} className='faicon1' /> 
+                </button> 
+              </div> 
+            ))
+          )}
+        </div>
       </div>
-    </div> 
     </>
   );
 }

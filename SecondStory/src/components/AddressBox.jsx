@@ -1,11 +1,12 @@
 
 import React, { useState } from 'react';
 import AddressModal from './AddressModal';
-import './styles.css/AddressBox.css';
+import '../components/style.css/AddressModal.css';
 
 const AddressBox = () => {
   const [address, setAddress] = useState({
     line1: '123 Main St',
+    line2: '7th cross',
     city: 'Springfield',
     state: 'IL',
     postalCode: '62704',
@@ -30,6 +31,7 @@ const AddressBox = () => {
     <div className="address-box"> 
     <div className='address-container'>
         <h2>Delivery Address</h2>
+        <p>{address.name} {address.phoneno}</p>
         <p>{address.line1}</p>
         <p>{address.city}, {address.state} {address.postalCode}</p>
       </div> 
