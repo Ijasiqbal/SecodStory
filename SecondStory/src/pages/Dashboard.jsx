@@ -76,7 +76,7 @@ function Dashboard() {
             <Profile />
           </div>
           <div className={`content-section ${activeSection === 'ChangePassword' ? 'active' : ''}`}>
-            <h1 className='shelf-content'>Change Password</h1>
+            <h1 className='shelf-content'>Password Manager</h1>
             <PasswordManager />
           </div>
           <div className={`content-section ${activeSection === 'Wishlist' ? 'active' : ''}`}>
@@ -87,7 +87,7 @@ function Dashboard() {
             <Address />
           </div>
           <div className={`content-section ${activeSection === 'Orders' ? 'active' : ''}`}>
-            <h1 className='shelf-content'>Orders Content</h1>
+            <h1 className='shelf-content'>My Orders</h1>
             <Orders />
           </div>
           <div className={`content-section ${activeSection === 'Logout' ? 'active' : ''}`}>
