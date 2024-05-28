@@ -1,13 +1,14 @@
 body {
   font-family: 'Inter', sans-serif;
-  background-color: rgb(243, 236, 236);
+  background: rgb(234, 233, 233);
 }
+
 .cart-item{
     display: flex;
     margin: 20px 0;
 }
 
-.cart-container {
+.cart-container { 
   max-width: 50%;
   margin-left: 8%;
   margin-top: 1%;
@@ -88,7 +89,7 @@ body {
   margin-inline-start: 5%;
   vertical-align: top;
   margin-top: 2%;
-  width: 30%; 
+  width: 30%;
 }
 
 .item-details h2{
@@ -119,26 +120,30 @@ body {
   margin-left: 25%;
 }
 
-
-.item-details h3 price-display {
-display: flex;
-font-size: 10%;
+.item-details h3 {
+  margin-left: 10%;
+  font-size: 80%;
+  margin-top: 5%;
+  font-weight: bold;
+  display: inline-flex;
+  width: 100%;
+  margin-right: 100px;
 }
 
 .original-price {
-text-decoration: line-through;
-color: grey;
-margin-right: 10px;
-margin-left: 5%;
-font-weight: lighter;
+  text-decoration: line-through;
+  color: rgb(105, 104, 104);
+  margin-right: 8px;
+  margin-left: 5px;
+  font-weight: lighter;
 }
 
 .discounted-price {
-color: black;
-font-weight: bold;
-font-size: 100%; 
-
+  color: black;
+  font-weight: bold;
+  font-size: 100%; 
 }
+  
 
 
 

@@ -5,7 +5,8 @@ import f1 from "../assets/f1.jpg";
 import f2 from "../assets/f2.jpg";
 import f3 from "../assets/f3.jpg";
 import Navbar from "../components/Navbar";
-import AddressBox from "./AddressBox";
+import Footer from '../components/Footer';
+import AddressBox from "../components/AddressBox";
 import styles from "./styles.css/Cart.module.css"; // Import styles as a module
 
 const CartPage = () => {
@@ -47,10 +48,8 @@ const CartPage = () => {
     return (
       <div className={styles["price-display"]}>
         <span className={styles["original-price"]}>Rs.{originalPrice}</span>
-        <span className={styles["discounted-price"]}>
-          Rs.{discountedPrice}/-
-        </span>
-      </div>
+        <span className={styles["discounted-price"]}>Rs.{discountedPrice}/-</span>
+      </div> 
     );
   };
 
@@ -88,7 +87,7 @@ const CartPage = () => {
                     <PriceDisplay
                       originalPrice={item.originalPrice}
                       discountedPrice={item.discountedPrice}
-                    />{" "}
+                    />{" "} 
                   </h3>
                 </div>
                 <button
@@ -110,12 +109,15 @@ const CartPage = () => {
               <hr />
               <p>Subtotal: Rs. {subtotal}/-</p>
               <p>Delivery Charges: Rs. {deliveryCharge}/-</p>
-              <p>
-                Coupon Discount:{" "}
+            
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <input type="text" style={{ flex: 1 }} />
+                  <p style={{flex:1,height:15}}>
+                Coupon Discount:{" "}</p>
+                
+                  <input type="text" style={{ flex: 0.33,width: 140,height:25,backgroundColor:"lightgray",borderRadius:15 }} />
+                  
                 </div>
-              </p>
+              
               <p>Total Price: Rs. {totalPrice}/-</p>
               <button className={styles.ButtonA} type="submit" name="Button">
                 Proceed
@@ -124,6 +126,7 @@ const CartPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
