@@ -5,6 +5,7 @@ import f1 from "../assets/f1.jpg";
 import f2 from "../assets/f2.jpg";
 import f3 from "../assets/f3.jpg";
 import Navbar from "../components/Navbar";
+import Footer from '../components/Footer';
 import AddressBox from "../components/AddressBox";
 import styles from "./styles.css/Cart.module.css"; // Import styles as a module
 
@@ -125,6 +126,7 @@ const CartPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'; 
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import w1 from '../assets/w1.jpg';
 import w2 from '../assets/w2.jpg';
 import w3 from '../assets/w3.jpg';
@@ -69,6 +70,7 @@ function Wishlist() {
           )}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
