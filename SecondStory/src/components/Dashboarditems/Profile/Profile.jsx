@@ -80,7 +80,7 @@ function Profile() {
             <button onClick={() => handleSave('username')} className="save-button">Save</button>
           </>
         ) : (
-          <p>{profile.username}</p>
+          <span>{profile.username}</span>
         )}
         {editingField !== 'username' && (
           <FontAwesomeIcon
@@ -104,7 +104,7 @@ function Profile() {
             <button onClick={() => handleSave('firstname')} className="save-button">Save</button>
           </>
         ) : (
-          <p>{profile.firstname}</p>
+          <span>{profile.firstname}</span>
         )}
         {editingField !== 'firstname' && (
           <FontAwesomeIcon
@@ -128,7 +128,7 @@ function Profile() {
             <button onClick={() => handleSave('lastname')} className="save-button">Save</button>
           </>
         ) : (
-          <p>{profile.lastname}</p>
+          <span>{profile.lastname}</span>
         )}
         {editingField !== 'lastname' && (
           <FontAwesomeIcon
@@ -152,7 +152,7 @@ function Profile() {
             <button onClick={() => handleSave('email')} className="save-button">Save</button>
           </>
         ) : (
-          <p>{profile.email}</p>
+          <span>{profile.email}</span>
         )}
         {editingField !== 'email' && (
           <FontAwesomeIcon
@@ -176,7 +176,7 @@ function Profile() {
             <button onClick={() => handleSave('phone')} className="save-button">Save</button>
           </>
         ) : (
-          <p>{profile.phone}</p>
+          <span>{profile.phone}</span>
         )}
         {editingField !== 'phone' && (
           <FontAwesomeIcon

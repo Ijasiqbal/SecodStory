@@ -2,7 +2,7 @@
 
 /* General styles */
 .profile-container {
-  max-width: 900px;
+  max-width: 900px; 
   margin: auto;
   padding: 20px 100px;
   background-color: #f4f4f4;
@@ -107,7 +107,8 @@
   background-color: #218838;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 1000px) {
   .profile-container {
     padding: 10px;
   }
@@ -143,4 +144,20 @@
   .save-button {
     margin-left: 15px;
   }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    
+    padding: 0;
+    background-color: white;
+   
+  }
+  .profile-text-container {
+    width: 100%;
+    margin: auto;
+    padding: 10px 30px;
+    background-color: #ebe9e9;
+    border-radius: 10px;
+}
 }

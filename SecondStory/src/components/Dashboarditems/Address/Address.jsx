@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes,faPlus } from '@fortawesome/free-solid-svg-icons';
 import './Address.css';
 
 function Address() {
@@ -64,13 +66,26 @@ function Address() {
   };
 
   return (
-    <>
-      <h1>Manage Addresses</h1>
+    <div className='address-manager-container'>
       <div className="address-container">
         < div className="form">
-        <button className="add-a-new-address" onClick={() => setShowForm(!showForm)}>
-          {showForm ? 'Hide Form' : 'ADD A NEW ADDRESS'}
-        </button>
+         <div className='form-button-container'>
+      <div>
+        {!showForm && (
+          <button className='form-button add-a-new-address' onClick={() => setShowForm(!showForm)}>
+            <FontAwesomeIcon icon={faPlus} /> ADD A NEW ADDRESS
+          </button>
+        )}
+      </div>
+      <div>
+        {showForm && (
+          <button className='form-button add-a-new-right' onClick={() => setShowForm(!showForm)}>
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
+        )}
+      </div>
+    </div>
+
         {showForm && (
           <div >
             <input
@@ -135,8 +150,8 @@ function Address() {
               <div>
                 <h4>{addr.fullName} {addr.phoneNumber}</h4>
                 <p>{addr.addressLine1} {addr.addressLine2} {addr.city} {addr.state} - {addr.pincode}</p>
-                <button onClick={() => handleEdit(index)}>Edit</button>
-                <button onClick={() => handleDelete(index)}>Delete</button>
+                <button className='address-list-edit' onClick={() => handleEdit(index)}>Edit</button>
+                <button className='address-list-delete' onClick={() => handleDelete(index)}>Delete</button>
               </div>
               )}
               {editIndex === index && (
@@ -144,42 +159,49 @@ function Address() {
                   <input
                     type="text"
                     name="fullName"
+                    placeholder="Full Name"
                     value={addr.fullName}
                     onChange={(e) => handleIndividualEditChange(index, e)}
                   />
                   <input
                     type="text"
                     name="phoneNumber"
+                    placeholder="Phone Number"
                     value={addr.phoneNumber}
                     onChange={(e) => handleIndividualEditChange(index, e)}
                   />
                   <input
                     type="text"
                     name="pincode"
+                    placeholder="Pin Code"
                     value={addr.pincode}
                     onChange={(e) => handleIndividualEditChange(index, e)}
                   />
                   <input
                     type="text"
                     name="addressLine1"
+                    placeholder="Address Line1"
                     value={addr.addressLine1}
                     onChange={(e) => handleIndividualEditChange(index, e)}
                   />
                   <input
                     type="text"
                     name="addressLine2"
+                    placeholder="Address Line2"
                     value={addr.addressLine2}
                     onChange={(e) => handleIndividualEditChange(index, e)}
                   />
                   <input
                     type="text"
                     name="city"
+                    placeholder="City"
                     value={addr.city}
                     onChange={(e) => handleIndividualEditChange(index, e)}
                   />
                   <input
                     type="text"
                     name="state"
+                    placeholder="State"
                     value={addr.state}
                     onChange={(e) => handleIndividualEditChange(index, e)}
                   />
@@ -190,7 +212,7 @@ function Address() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
