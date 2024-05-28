@@ -7,6 +7,7 @@ import LoginIntro from '../components/LoginIntro'
 import Service from '../components/Service'
 import Navbar from '../components/Navbar'
 
+
 export default function Landing() {
   return (
     <div>

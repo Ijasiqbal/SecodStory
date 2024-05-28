@@ -3,8 +3,9 @@ import styles from './Row.module.css';
 import ShelfBook from './ShelfBook';
 import AddBook from './AddBook';
 import { Carousel } from 'primereact/carousel';
+import paperClip from '../../../assets/paperClip.png'
 
-export default function Row({ books }) {
+export default function Row({ books, category}) {
   const itemTemplate = (item) => {
     if (item.addBook) {
       return <AddBook  />;
@@ -15,13 +16,13 @@ export default function Row({ books }) {
   const responsiveOptions = [
     {
       breakpoint: '1024px',
-      numVisible: 3,
+      numVisible: 5,
       numScroll: 3
     },
     {
       breakpoint: '768px',
-      numVisible: 2,
-      numScroll: 2
+      numVisible: 3,
+      numScroll: 3
     },
     {
       breakpoint: '560px',
@@ -35,6 +36,10 @@ export default function Row({ books }) {
   return (
     <div className={styles.row}>
       <Carousel className={styles.custom} value={booksWithAddBook} itemTemplate={itemTemplate} responsiveOptions={responsiveOptions} numVisible={5} numScroll={1} />
+      <div className={styles.sticker}>
+        <img src={paperClip} alt="peprlip" className={styles.stickerImg}/>
+        <p>{category}</p>
+      </div>
     </div>
   )
 }
