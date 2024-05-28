@@ -75,8 +75,7 @@ const CartPage = () => {
         <div className={styles["cart-container1"]}>
           <div className={styles["cart-items-container"]}>
             {cartItems.map((item) => (
-              <div>
-                <div key={item.id} className={styles["cart-item"]}>
+              <div key={item.id} className={styles["cart-item"]}>
                 <img src={item.image} alt="img" />
                 <div className={styles["item-details"]}>
                   <h2>{item.name}</h2>
@@ -97,11 +96,8 @@ const CartPage = () => {
                 >
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
-                
+                <hr></hr>
               </div>
-              <hr></hr>
-              </div>
-              
             ))}
           </div>
           <div className={styles["order-summary"]}>
