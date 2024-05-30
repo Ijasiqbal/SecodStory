@@ -1,0 +1,29 @@
+/* Market container */
+.market {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Title styling */
+.market h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2em;
+}
+
+/* Flex container for the filter */
+.market-flexstart {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.book-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+

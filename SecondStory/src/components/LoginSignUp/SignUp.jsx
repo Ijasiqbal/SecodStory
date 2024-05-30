@@ -100,7 +100,7 @@ function SignUp() {
               <div className={styles['show-password-container']}>
                 <div className={styles['checkbox-container']}>
                   <input type="checkbox" id="show-password" checked={showPassword} onChange={togglePasswordVisibility} aria-label="Show Password" />
-                  <label htmlFor="show-password" className={styles['show-password-text']}>Show Password</label>
+                  <label htmlFor="show-password" className={styles['show-password-text']}>RememberMe</label>
                 </div>
               </div>
 

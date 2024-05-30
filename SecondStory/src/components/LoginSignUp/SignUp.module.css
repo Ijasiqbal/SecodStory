@@ -2,7 +2,7 @@
 
 /* Base styles */
 .signup-container {
-  background-image: url("https://wallpapers.com/images/high/bulbs-along-shelves-filled-with-books-h99zik512sz2yilk.webp");
+  background-image: url("./../../assets/BACKGROUND_.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;

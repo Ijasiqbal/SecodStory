@@ -9,7 +9,7 @@ body {
 }
 
 .signup-container {
-  background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/arvrbg.png");
+  background-image:url("./../../assets/BACKGROUND_.jpg");
   height: 100vh;
   background-size: cover;
   display: flex;
