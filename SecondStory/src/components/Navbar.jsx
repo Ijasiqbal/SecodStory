@@ -32,7 +32,13 @@ const Navbar = () => {
         <Link to="/product">Market</Link>
       </div>
       <div className="searchInput">
-        <input type="text" name="" id="" placeholder="Search for books" />
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Search for books"
+          style={{ textAlign: "center" }}
+        />
       </div>
       <div className="icon-grp">
         <Link to="/wishlist" className="mobileNone">
