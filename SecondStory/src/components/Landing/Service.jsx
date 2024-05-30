@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './style.css/Services.module.css'; // Import the CSS module
-import sell from '../assets/Sell.png'
-import buy from '../assets/Buy.png'
-import borrow from '../assets/Borrow.png'
-import lend from '../assets/Lend.png'
+import styles from './Services.module.css'; // Import the CSS module
+import sell from '../../assets/Sell.png'
+import buy from '../../assets/Buy.png'
+import borrow from '../../assets/Borrow.png'
+import lend from '../../assets/Lend.png'
 
 export default function Service() {
   return (

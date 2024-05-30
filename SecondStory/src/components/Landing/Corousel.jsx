@@ -1,9 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import corousel1 from '../assets/corousel1.jpg';
-import corousel2 from '../assets/SLIDE2.jpg';
-import banner1 from '../assets/banner1.jpg';
-import banner2 from '../assets/banner2.jpg';
+import corousel1 from '../../assets/corousel1.jpg';
+import corousel2 from '../../assets/SLIDE2.jpg';
+import banner1 from '../../assets/banner1.jpg';
+import banner2 from '../../assets/banner2.jpg';
 
 export default function Corousel() {
   const items = [

@@ -4,6 +4,8 @@ import logo from '../../assets/SECOND.png';
 import facebook from '../../assets/facebook.png';
 import google from '../../assets/google.png';
 import linkedin from '../../assets/linkedin.png';
+import { apiEndPoint } from '../../api/apiEndpoint';
+import axios from 'axios';
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -14,11 +16,19 @@ function Login() {
     setShowPassword(!showPassword);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Handle login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+    
+    try {
+      console.log(`Logging in user at api ${apiEndPoint}user/login :`, { email, password });
+      const response = await axios.post(`${apiEndPoint}user/login`, { email, password });
+      console.log('Login successful:', response.data);
+    } catch (error) {
+      console.error('Login failed:', error);
+      // Optionally, you can show an error message to the user
+      
+    }
   };
 
   return (
