@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 export default function SellerAd() {
@@ -90,18 +93,6 @@ export default function SellerAd() {
     return <img loading="lazy" src={src} alt={alt} className={className} />;
   }
 
-  const Header = ({ title, imgSrc, imgAlt }) => (
-    <header className="flex gap-5 text-3xl font-medium text-black max-md:flex-wrap max-md:max-w-full">
-      <div className="flex-auto">{title}</div>
-      <img
-        loading="lazy"
-        src={imgSrc}
-        alt={imgAlt}
-        className="shrink-0 aspect-square w-[31px]"
-      />
-    </header>
-  );
-
   function UserCard({ name, location, postingDate, description, price }) {
     return (
       <section className="flex gap-5 max-md:flex-col max-md:gap-0">
@@ -117,11 +108,6 @@ export default function SellerAd() {
                 />
                 <span className="flex-auto my-auto">{name}</span>
               </div>
-
-              {/* <div className="self-start mt-10 ml-3.5 text-s max-md:mt-10 max-md:ml-2.5">
-                Location
-              </div>
-              <p className="mt-1 text-lg font-medium">{location}</p> */}
               <div className="flex gap-1 items-start -ml-3 mt-11 font-medium max-md:mt-10">
                 <img
                   loading="lazy"
@@ -188,7 +174,6 @@ export default function SellerAd() {
             </div>
           </div>
         </section>
-
         <div className="flex flex-col px-6 pt-5 pb-20 bg-white rounded-md max-w-[759px] max-md:px-5">
           <header className="flex gap-5 text-3xl font-medium text-black max-md:flex-wrap max-md:max-w-full">
             <h1 className="flex-auto">The Fault in Our Stars</h1>
