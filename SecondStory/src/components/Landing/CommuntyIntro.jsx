@@ -1,6 +1,6 @@
 import React from 'react'
-import community from '../assets/community.jpg';
-import './style.css/CommunityIntro.css';
+import community from '../../assets/community.jpg';
+import './CommunityIntro.css';
 
 export default function CommuntyIntro() {
   return (

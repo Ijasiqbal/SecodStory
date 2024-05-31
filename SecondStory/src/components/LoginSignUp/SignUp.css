@@ -179,3 +179,15 @@ input[id="phone"]{
           width: 200px;
       }
 }
+
+.phone-group {
+  display: flex;
+  align-items: center;
+}
+
+.country-code-dropdown {
+  width: 120px;
+  margin-right: 10px;
+  display: none;
+}
+

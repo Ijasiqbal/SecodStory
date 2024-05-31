@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './style.css/LoginIntro.module.css'
-import loginPic from '../assets/loginPic2.jpg'
+import styles from './LoginIntro.module.css'
+import loginPic from '../../assets/loginPic2.jpg'
 
 export default function LoginIntro() {
   return (

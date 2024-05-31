@@ -13,6 +13,7 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  Select,
 } from '@chakra-ui/react';
 import styles from './AddBook.module.css';
 
@@ -23,6 +24,27 @@ const AddBook = () => {
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
   const [photos, setPhotos] = useState([]);
+  const [genre, setGenre] = useState('');
+  const [subgenre, setSubgenre] = useState('');
+
+  const genres = [
+    { value: 'fiction', label: 'Fiction' },
+    { value: 'non-fiction', label: 'Non-Fiction' },
+    // Add more genres here
+  ];
+
+  const subgenres = {
+    fiction: [
+      { value: 'fantasy', label: 'Fantasy' },
+      { value: 'sci-fi', label: 'Science Fiction' },
+      // Add more subgenres for fiction here
+    ],
+    'non-fiction': [
+      { value: 'biography', label: 'Biography' },
+      { value: 'self-help', label: 'Self Help' },
+      // Add more subgenres for non-fiction here
+    ],
+  };
 
   const handleFileChange = (e) => {
     setPhotos(Array.from(e.target.files));
@@ -30,7 +52,7 @@ const AddBook = () => {
 
   const handleSave = () => {
     // Handle save action
-    console.log({ title, author, price, description, photos });
+    console.log({ title, author, price, description, photos, genre, subgenre });
     onClose();
   };
 
@@ -92,6 +114,38 @@ const AddBook = () => {
                 multiple
                 onChange={handleFileChange}
               />
+            </Box>
+            <Box mb={4}>
+              <label htmlFor="genre">Genre</label>
+              <Select
+                id="genre"
+                value={genre}
+                onChange={(e) => setGenre(e.target.value)}
+                placeholder="Select genre"
+              >
+                {genres.map((genre) => (
+                  <option key={genre.value} value={genre.value}>
+                    {genre.label}
+                  </option>
+                ))}
+              </Select>
+            </Box>
+            <Box mb={4}>
+              <label htmlFor="subgenre">Subgenre</label>
+              <Select
+                id="subgenre"
+                value={subgenre}
+                onChange={(e) => setSubgenre(e.target.value)}
+                placeholder="Select subgenre"
+                isDisabled={!genre}
+              >
+                {genre &&
+                  subgenres[genre].map((subgenre) => (
+                    <option key={subgenre.value} value={subgenre.value}>
+                      {subgenre.label}
+                    </option>
+                  ))}
+              </Select>
             </Box>
           </ModalBody>
 

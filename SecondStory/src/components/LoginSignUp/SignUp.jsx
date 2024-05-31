@@ -7,8 +7,14 @@ import linkedin from '../../assets/linkedin.png';
 import { apiEndPoint } from '../../api/apiEndpoint'; // Import the API endpoint constant
 import axios from 'axios'; // Import axios for making HTTP requests
 
+const countryCodes = [
+  { value: '+1', label: '(+1)' },
+  { value: '+91', label: '(+91)' },
+  // Add more country codes as needed
+];
+
 function SignUp() {
-  const [username, setUsername] = useState('');
+  const [userName, setuserName] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -16,6 +22,7 @@ function SignUp() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [countryCode, setCountryCode] = useState(countryCodes[0].value);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -32,22 +39,26 @@ function SignUp() {
 
     // Prepare the user data
     const userData = {
-      username,
+      userName,
       firstName,
       lastName,
       email,
-      phone,
+      phone: {
+        countryCode,
+        phoneNumber: phone,
+      },
       password,
+      passwordConfirm: confirmPassword,
     };
 
     try {
       console.log('Registering user:', userData);
       // Make a POST request to the API endpoint to register the user
-      const response = await axios.post(`${apiEndPoint}/signin`, userData);
+      const response = await axios.post(`${apiEndPoint}user/signup`, userData);
       console.log('Registration successful:', response.data);
       // Optionally, you can redirect the user to a different page or show a success message
     } catch (error) {
-      console.error('Registration failed:', error.response.data);
+      console.error('Registration failed:', error.response?.data);
       // Handle the registration error, e.g., show an error message to the user
     }
   };
@@ -75,7 +86,7 @@ function SignUp() {
           <form onSubmit={handleSubmit}>
             <div className={styles['form-group']}>
               <label htmlFor="username">Username:</label>
-              <input type="text" id="username" name="username" required value={username} onChange={(e) => setUsername(e.target.value)} aria-label="Username" className={styles['Signup-username']} />
+              <input type="text" id="username" name="username" required value={userName} onChange={(e) => setuserName(e.target.value)} aria-label="Username" className={styles['Signup-username']} />
               <div className={styles['form-group-names']}>
                 <div className={styles['form-group-column']}>
                   <label htmlFor="firstName">First Name:</label>
@@ -89,8 +100,23 @@ function SignUp() {
 
               <label htmlFor="email">Email:</label>
               <input type="email" id="email" name="email" required value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Email" className={styles['Signup-email']} />
+
               <label htmlFor="phone">Phone:</label>
-              <input type="text" id="phone" name="phone" required value={phone} onChange={(e) => setPhone(e.target.value)} aria-label="Phone" className={styles['Signup-phone']} />
+              <div className={styles['phone-group']}>
+                <select
+                  value={countryCode}
+                  onChange={(e) => setCountryCode(e.target.value)}
+                  className={styles['country-code-dropdown']}
+                  aria-label="Country Code"
+                >
+                  {countryCodes.map((code) => (
+                    <option key={code.value} value={code.value}>
+                      {code.label}
+                    </option>
+                  ))}
+                </select>
+                <input type="text" id="phone" name="phone" required value={phone} onChange={(e) => setPhone(e.target.value)} aria-label="Phone" className={styles['Signup-phone']} />
+              </div>
 
               <label htmlFor="password">Password:</label>
               <input type={showPassword ? 'text' : 'password'} id="password" name="password" required value={password} onChange={(e) => setPassword(e.target.value)} aria-label="Password" className={styles['Signup-password']} />

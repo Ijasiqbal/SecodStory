@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './style.css/Categories.module.css'
-import Cate1 from '../assets/cate1.jpg'
-import Cate2 from '../assets/cate2.jpg'
-import Cate3 from '../assets/cate3.jpg'
-import Cate4 from '../assets/cate4.jpg'
-import Cate5 from '../assets/cate5.jpg'
+import styles from './Categories.module.css'
+import Cate1 from '../../assets/cate1.jpg'
+import Cate2 from '../../assets/cate2.jpg'
+import Cate3 from '../../assets/cate3.jpg'
+import Cate4 from '../../assets/cate4.jpg'
+import Cate5 from '../../assets/cate5.jpg'
 
 export default function Categories() {
   return (

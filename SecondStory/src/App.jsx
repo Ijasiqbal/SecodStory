@@ -7,6 +7,7 @@ import Login from './components/LoginSignUp/Login.jsx'
 import SignUp from './components/LoginSignUp/SignUp.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import Wishlist from './pages/Wishlist.jsx'
+import SellerAd from './pages/SellerAd.jsx'
 import Market from './pages/Market.jsx'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path='/dashboard' element={< Dashboard/>} />
         <Route path='/wishlist' element={<Wishlist/>} />
+        <Route path='/SellerAd' element={<SellerAd />} /> 
         <Route path='/market' element={<Market/>} /> 
       </Routes>
     </Router>
