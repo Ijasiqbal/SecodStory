@@ -13,8 +13,8 @@ export default function Landing() {
     <div>
         <Navbar />
         <Corousel />  
-        <Service />
         <CommuntyIntro />
+        <Service />
         <Categories />
         <LoginIntro />
         <Footer />

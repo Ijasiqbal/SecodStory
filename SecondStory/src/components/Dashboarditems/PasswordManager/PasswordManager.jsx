@@ -72,7 +72,7 @@ function PasswordManager() {
             </span>
           </div>
         </div>
-        <div className="form-group">
+        <div className="form-group py-0">
           <label>Confirm Password</label>
           <input
             type="password"

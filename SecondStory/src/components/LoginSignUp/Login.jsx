@@ -9,7 +9,7 @@ import axios from 'axios';
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState('');
+  const [identifier, setidentifier] = useState('');
   const [password, setPassword] = useState('');
 
   const togglePasswordVisibility = () => {
@@ -21,13 +21,21 @@ function Login() {
     // Handle login logic here
     
     try {
-      console.log(`Logging in user at api ${apiEndPoint}user/login :`, { email, password });
-      const response = await axios.post(`${apiEndPoint}user/login`, { email, password });
+      console.log(`Logging in user at api ${apiEndPoint}user/login :`, { identifier, password });
+      const response = await axios.post(`${apiEndPoint}user/login`, { identifier, password }, { headers: { 'Content-Type': 'application/json' }, withCredentials: true
+     });
       console.log('Login successful:', response.data);
+      window.location.href='/';
     } catch (error) {
       console.error('Login failed:', error);
-      // Optionally, you can show an error message to the user
-      
+      if (error.response) {
+        console.error('Login failed (response):', error.response);
+      } else if (error.request) {
+        console.error('Login failed (request):', error.request);
+      } else {
+        console.error('Login failed (general):', error.message);
+      }
+      // Optionally, you can show an error message to the user 
     }
   };
 
@@ -58,8 +66,8 @@ function Login() {
               id="email" 
               name="email" 
               required 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)} 
+              value={identifier} 
+              onChange={(e) => setidentifier(e.target.value)} 
               className={styles.loginEmail}
               aria-label="Email"
             />
