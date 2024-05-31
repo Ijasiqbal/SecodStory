@@ -4,7 +4,7 @@
     align-items: center;
     width: 200px;
     position: relative;
-    margin: 1rem;
+    margin: 2rem;
 }
 
 .book-card .add-to-cart-button,
@@ -25,6 +25,7 @@
     width: 200px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
   }
   
   .book-image {
@@ -35,13 +36,13 @@
   .book-card-subtitle {
     font-size: 15px;
     margin-bottom: 5px;
-    margin: 0;
+    margin-bottom: 5px;
     color: #393280;
   }
   
   .book-card-author {
     font-size: 13px;
-    margin: 0;
+    margin-bottom: 5px;
     color: #888888;
   }
   

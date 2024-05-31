@@ -80,7 +80,7 @@ function Profile() {
             <button onClick={() => handleSave('username')} className="save-button">Save</button>
           </>
         ) : (
-          <span>{profile.username}</span>
+          <span className='span-text'>{profile.username}</span>
         )}
         {editingField !== 'username' && (
           <FontAwesomeIcon
@@ -104,7 +104,7 @@ function Profile() {
             <button onClick={() => handleSave('firstname')} className="save-button">Save</button>
           </>
         ) : (
-          <span>{profile.firstname}</span>
+          <span className='span-text'>{profile.firstname}</span>
         )}
         {editingField !== 'firstname' && (
           <FontAwesomeIcon
@@ -128,7 +128,7 @@ function Profile() {
             <button onClick={() => handleSave('lastname')} className="save-button">Save</button>
           </>
         ) : (
-          <span>{profile.lastname}</span>
+          <span className='span-text'>{profile.lastname}</span>
         )}
         {editingField !== 'lastname' && (
           <FontAwesomeIcon
@@ -152,7 +152,7 @@ function Profile() {
             <button onClick={() => handleSave('email')} className="save-button">Save</button>
           </>
         ) : (
-          <span>{profile.email}</span>
+          <span className='span-text'>{profile.email}</span>
         )}
         {editingField !== 'email' && (
           <FontAwesomeIcon
@@ -176,7 +176,7 @@ function Profile() {
             <button onClick={() => handleSave('phone')} className="save-button">Save</button>
           </>
         ) : (
-          <span>{profile.phone}</span>
+          <span className='span-text'>{profile.phone}</span>
         )}
         {editingField !== 'phone' && (
           <FontAwesomeIcon

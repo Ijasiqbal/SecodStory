@@ -169,7 +169,7 @@ function ProductCard() {
             <h2 className={styles['book-name']}>{product.name}</h2>
             <div className={styles['author-price']}>
               <p className={styles['author-name']}>{product.author}</p>
-              <p className={styles.price}>RS:{product.price}</p>
+              <p className={styles.price}>Rs.{product.price}</p>
             </div>
           </div>
         </div>

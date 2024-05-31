@@ -69,7 +69,9 @@
   width: 150px;
   font-weight: bold;
   color: #555;
+  margin: 0;
 }
+
 
 .profile-field p {
   flex: 1;
@@ -81,8 +83,12 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
+  margin: 0;
 }
 
+.span-text{
+  width: 250px;
+}
 .edit-icon {
   margin-left: 30px;
   color: #007bff;
@@ -159,5 +165,5 @@
     padding: 10px 30px;
     background-color: #ebe9e9;
     border-radius: 10px;
-}
+} 
 }

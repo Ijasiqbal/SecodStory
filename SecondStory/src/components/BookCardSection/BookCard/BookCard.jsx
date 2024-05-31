@@ -14,7 +14,7 @@ const BookCard = ({ book }) => {
       </button>
       <h3 className='book-card-subtitle'>{book.subtitle}</h3>
       <p className='book-card-author'>{book.author}</p>
-      <p className='book-card-price'>RS {book.price}</p>
+      <p className='book-card-price'>Rs.{book.price}</p>
       <button className="add-to-cart-button">Add to Cart</button>
     </div>
   );

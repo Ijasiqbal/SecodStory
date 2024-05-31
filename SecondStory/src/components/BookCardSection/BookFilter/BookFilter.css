@@ -1,73 +1,52 @@
-/* Filter form container */
- .filter-form {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-}
-
-/* Form group styling */
-.form-group {
-  margin-bottom: 20px;
-}
-
-/* Label styling */
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  font-size: 14px;
-  color: #333;
-}
-
-/* Select input container styling */
-.select-input {
+.filter-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   width: 200px;
 }
 
-/* Styling for react-select control */
-.select-input .react-select__control {
-  border-radius: 4px;
+.filter-icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.filter-heading{
+  margin: 0 !important;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.genre-dropdown,
+.subgenre-dropdown {
+  position: absolute;
+  background-color: #fff;
   border: 1px solid #ccc;
-  box-shadow: none;
-  transition: border-color 0.2s;
-}
-
-/* Hover and focus states for the control */
-.select-input .react-select__control:hover,
-.select-input .react-select__control--is-focused {
-  border-color: #007bff;
-}
-
-/* Menu styling for react-select */
-.select-input .react-select__menu {
   border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Menu list styling */
-.select-input .react-select__menu-list {
-  padding: 0;
-}
-
-/* Option styling */
-.select-input .react-select__option {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  font-size: 14px;
+  z-index: 1000; /* Ensure it appears above other content */
+  display: inline-block; /* Display side by side */
 }
 
-/* Selected option styling */
-.select-input .react-select__option--is-selected {
-  background-color: #007bff;
-  color: #fff;
+
+.subgenre-dropdown {
+  left: 170px; /* Adjust the distance between dropdowns */
 }
 
-/* Option hover state */
-.select-input .react-select__option--is-focused {
-  background-color: #f0f8ff;
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Disabled state for the select */
-.select-input .react-select__control--is-disabled {
-  background-color: #f8f8f8;
-  cursor: not-allowed;
+.dropdown li {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.dropdown li:hover {
+  background-color: #f5f5f5;
 }
