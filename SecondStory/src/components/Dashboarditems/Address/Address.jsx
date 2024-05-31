@@ -205,7 +205,7 @@ function Address() {
                     value={addr.state}
                     onChange={(e) => handleIndividualEditChange(index, e)}
                   />
-                  <button onClick={handleIndividualEditSave}>Save</button>
+                  <button className="save-address" onClick={handleIndividualEditSave}>Save</button>
                 </div>
               )}
             </div>

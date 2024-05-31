@@ -19,6 +19,19 @@ const generateFakeBooks = (count) => {
     const genreKeys = Object.keys(genres);
     const genre = genreKeys[Math.floor(Math.random() * genreKeys.length)];
     const subGenre = genres[genre][Math.floor(Math.random() * genres[genre].length)];
+    const imageUrls = [
+      'https://a.media-amazon.com/images/I/51I3Gaqu0zL._SY445_SX342_.jpg',
+      'https://a.media-amazon.com/images/I/51phjz9peJL._SY445_SX342_.jpg',
+      'https://a.media-amazon.com/images/I/51zgZBxy1LL._SY445_SX342_.jpg',
+      'https://a.media-amazon.com/images/I/51zR0tnPfqL._SY445_SX342_.jpg',
+      'https://a.media-amazon.com/images/I/51e6h7TMT8L._SY445_SX342_.jpg',
+      'https://a.media-amazon.com/images/I/718wCbSuE9L._SY425_.jpg',
+      'https://a.media-amazon.com/images/I/6195CYgDcHL._SX342_SY445_.jpg',
+      'https://a.media-amazon.com/images/I/6195CYgDcHL._SX342_SY445_.jpg',
+      'https://a.media-amazon.com/images/I/81LjtTaol9S._SL1500_.jpg',
+      'https://a.media-amazon.com/images/I/71gr8OhhJxL._SL1000_.jpg',
+    ];
+
 
     const book = {
       id: i + 1,
@@ -27,7 +40,7 @@ const generateFakeBooks = (count) => {
       author: `Author ${i + 1}`,
       description: `Description for Book ${i + 1}`,
       price: Math.floor(Math.random() * 1000) + 1,
-      images: `https://picsum.photos/200/300?random=${i + 1}`,
+      images: imageUrls[Math.floor(Math.random() * imageUrls.length)],
       genre: genre,
       subGenre: subGenre,
       condition: ['New', 'Used', 'Like New'][Math.floor(Math.random() * 3)],
