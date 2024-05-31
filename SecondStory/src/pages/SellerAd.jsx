@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
