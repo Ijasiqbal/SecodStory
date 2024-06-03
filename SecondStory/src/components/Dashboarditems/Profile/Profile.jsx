@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload, faEdit } from '@fortawesome/free-solid-svg-icons';
 import './Profile.css';
+import axios from 'axios';
+import { apiEndPoint } from '../../../api/apiEndpoint';
+import axiosInstance from '../../../api/axiosInstance';
 
 function Profile() {
   const [editingField, setEditingField] = useState(null);
@@ -45,6 +48,22 @@ function Profile() {
     // Handle save logic here, if necessary
     console.log(`${field} saved:`, profile[field]);
   };
+
+  const fetchProfile = async () => {
+    try {
+      const response = await axiosInstance.get(`${apiEndPoint}user/profile`, { withCredentials: true });
+      console.log('Profile fetched:', response.data);
+  }
+  catch (error) {
+    console.error('Profile fetch failed:', error);
+  }
+}
+
+  useEffect(() =>{
+    fetchProfile();
+  })
+
+  
 
   return (
     <div className="profile-container">

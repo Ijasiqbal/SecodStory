@@ -6,6 +6,7 @@ import google from '../../assets/google.png';
 import linkedin from '../../assets/linkedin.png';
 import { apiEndPoint } from '../../api/apiEndpoint';
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -24,8 +25,10 @@ function Login() {
       console.log(`Logging in user at api ${apiEndPoint}user/login :`, { identifier, password });
       const response = await axios.post(`${apiEndPoint}user/login`, { identifier, password }, { headers: { 'Content-Type': 'application/json' }, withCredentials: true
      });
+     Cookies.set('token', response.data.token, { path: '/' })
+
       console.log('Login successful:', response.data);
-      window.location.href='/';
+      
     } catch (error) {
       console.error('Login failed:', error);
       if (error.response) {
