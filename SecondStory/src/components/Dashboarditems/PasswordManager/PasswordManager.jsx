@@ -30,17 +30,16 @@ function PasswordManager() {
       setError('');
       try {
         const token = Cookies.get('token');
+        console.log('Resetting password:', {
+          password: form.newPassword,
+          passwordConfirm: form.confirmPassword,
+        })
         const response = await axios.post(
-          `${apiEndPoint}user/resetPassword`,
+          `${apiEndPoint}user/resetPassword/${token}`,
           {
-            newPassword: form.newPassword,
-            confirmPassword: form.confirmPassword,
+            password: form.newPassword,
+            passwordConfirm: form.confirmPassword,
           },
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
         );
         console.log('Password updated successfully');
         // Handle successful password update here, like showing a success message
