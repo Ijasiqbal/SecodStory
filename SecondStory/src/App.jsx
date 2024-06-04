@@ -7,6 +7,7 @@ import Login from "./components/LoginSignUp/Login.jsx";
 import SignUp from "./components/LoginSignUp/SignUp.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import SellerAd from "./pages/SellerAd.jsx";
+import ChatWidget from "./components/ChatWidget/index.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/listed-product" element={<SellerAd />} />
         </Routes>
       </Router>
+      <ChatWidget />
     </>
   );
 }
