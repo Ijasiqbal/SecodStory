@@ -9,9 +9,14 @@ import Address from '../components/Dashboarditems/Address/Address';
 import { Link } from 'react-router-dom'; // Import Link component
 import PasswordManager from '../components/Dashboarditems/PasswordManager/PasswordManager';
 import Orders from '../components/Dashboarditems/Orders/Orders';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUser } from '../Redux/userSlice';
+import Cookies from 'js-cookie';
 
 function Dashboard() {
   const [activeSection, setActiveSection] = useState('Shelf');
+
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -59,7 +64,12 @@ function Dashboard() {
               </Link>
             </li>
             <li>
-              <Link to="#" onClick={() => setActiveSection('Logout')} className={activeSection === 'Logout' ? 'activeLi' : ''}>
+              <Link to="#" onClick={() => {
+                setActiveSection('Logout')
+                //clear cookies
+                Cookies.remove('token', { path: '/' });
+                dispatch(setUser(null))
+              }} className={activeSection === 'Logout' ? 'activeLi' : ''}>
                 <i><FontAwesomeIcon icon={faSignOutAlt} /></i>
                 Logout
               </Link>
@@ -92,6 +102,7 @@ function Dashboard() {
           </div>
           <div className={`content-section ${activeSection === 'Logout' ? 'active' : ''}`}>
             <h1 className='shelf-content'>Logout Content</h1>
+            
           </div>
         </div>
       </div>

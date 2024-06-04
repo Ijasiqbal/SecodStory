@@ -16,30 +16,31 @@ import {
   Select,
 } from '@chakra-ui/react';
 import styles from './AddBook.module.css';
+import axiosInstance from '../../../api/axiosInstance';
 
-const AddBook = () => {
+const AddBook = ({ category }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState({ main_title: '', sub_title: '' });
   const [author, setAuthor] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
-  const [photos, setPhotos] = useState([]);
+  const [images, setImages] = useState({ main_image: '', image1: '', image2: '' });
   const [genre, setGenre] = useState('');
   const [subgenre, setSubgenre] = useState('');
 
   const genres = [
-    { value: 'fiction', label: 'Fiction' },
-    { value: 'non-fiction', label: 'Non-Fiction' },
+    { value: 'Fiction', label: 'Fiction' },
+    { value: 'Non-fiction', label: 'Non-Fiction' },
     // Add more genres here
   ];
 
   const subgenres = {
-    fiction: [
+    Fiction: [
       { value: 'fantasy', label: 'Fantasy' },
       { value: 'sci-fi', label: 'Science Fiction' },
       // Add more subgenres for fiction here
     ],
-    'non-fiction': [
+    'Non-fiction': [
       { value: 'biography', label: 'Biography' },
       { value: 'self-help', label: 'Self Help' },
       // Add more subgenres for non-fiction here
@@ -47,12 +48,33 @@ const AddBook = () => {
   };
 
   const handleFileChange = (e) => {
-    setPhotos(Array.from(e.target.files));
+    const files = Array.from(e.target.files);
+    if (files.length >= 3) {
+      setImages({
+        main_image: URL.createObjectURL(files[0]), // Replace with your actual upload logic
+        image1: URL.createObjectURL(files[1]), // Replace with your actual upload logic
+        image2: URL.createObjectURL(files[2]), // Replace with your actual upload logic
+      });
+    }
   };
 
-  const handleSave = () => {
-    // Handle save action
-    console.log({ title, author, price, description, photos, genre, subgenre });
+  const handleSave = async () => {
+    const formData = {
+      title,
+      author,
+      description,
+      price,
+      images,
+      genres: genre,
+      category: category === 'To Sell' ? 'sell' : 'lend',
+    };
+    try {
+      console.log('Adding book:', formData)
+      const response = await axiosInstance.post(`book/addBook`, formData);
+      console.log('Book added successfully:', response.data);
+    } catch (error) {
+      console.error('Error adding book:', error);
+    }
     onClose();
   };
 
@@ -71,12 +93,21 @@ const AddBook = () => {
           <ModalCloseButton />
           <ModalBody>
             <Box mb={4}>
-              <label htmlFor="title">Title</label>
+              <label htmlFor="main_title">Main Title</label>
               <Input
-                id="title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                placeholder="Enter book title"
+                id="main_title"
+                value={title.main_title}
+                onChange={(e) => setTitle({ ...title, main_title: e.target.value })}
+                placeholder="Enter main title"
+              />
+            </Box>
+            <Box mb={4}>
+              <label htmlFor="sub_title">Sub Title</label>
+              <Input
+                id="sub_title"
+                value={title.sub_title}
+                onChange={(e) => setTitle({ ...title, sub_title: e.target.value })}
+                placeholder="Enter sub title"
               />
             </Box>
             <Box mb={4}>
