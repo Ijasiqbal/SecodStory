@@ -8,13 +8,13 @@ const instance = axios.create({
     baseURL: apiEndPoint,
     headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${token}`, 
     }
 
 })
 instance.interceptors.request.use((config) => {
     console.log('Request headers:', config.headers);
-    return config;
+    return config; 
   });
-
-export default instance;
+ 
+export default instance;  

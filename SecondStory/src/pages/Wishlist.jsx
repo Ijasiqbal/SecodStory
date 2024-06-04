@@ -38,6 +38,7 @@ function Wishlist() {
   const handleAddToCart = (product) => {
     if (!cart.find(item => item.id === product.id)) {
       setCart([...cart, product]);
+      
     }
   };
 
@@ -62,7 +63,7 @@ function Wishlist() {
                   <FontAwesomeIcon icon={faTimes} />
                 </button>
                 <button onClick={() => handleAddToCart(product)} className='icon1'>
-                  Add to Cart
+                  Add to Cart 
                   <FontAwesomeIcon icon={faShoppingCart} className='faicon1' /> 
                 </button> 
               </div> 
