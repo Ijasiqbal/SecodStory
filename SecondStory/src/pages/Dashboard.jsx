@@ -8,7 +8,7 @@ import Profile from '../components/Dashboarditems/Profile/Profile';
 import Address from '../components/Dashboarditems/Address/Address';
 import { Link } from 'react-router-dom'; // Import Link component
 import PasswordManager from '../components/Dashboarditems/PasswordManager/PasswordManager';
-import Orders from '../components/Dashboarditems/Orders/Orders';
+import Orders from '../components/Dashboarditems/Orders/MyOrders/Orders';
 
 function Dashboard() {
   const [activeSection, setActiveSection] = useState('Shelf');
@@ -55,7 +55,7 @@ function Dashboard() {
             <li>
               <Link to="#" onClick={() => setActiveSection('Orders')} className={activeSection === 'Orders' ? 'activeLi' : ''}>
                 <i><FontAwesomeIcon icon={faBox} /></i>
-                Orders
+                My Orders
               </Link>
             </li>
             <li>
