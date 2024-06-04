@@ -8,7 +8,7 @@ import paperClip from '../../../assets/paperClip.png'
 export default function Row({ books, category}) {
   const itemTemplate = (item) => {
     if (item.addBook) {
-      return <AddBook  />;
+      return <AddBook category= {category} />;
     }
 
     return <ShelfBook key={item.id} book={item} />;
