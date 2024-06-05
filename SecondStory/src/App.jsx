@@ -9,6 +9,8 @@ import Dashboard from './pages/Dashboard.jsx'
 import Wishlist from './pages/Wishlist.jsx'
 import SellerAd from './pages/SellerAd.jsx'
 import Market from './pages/Market.jsx'
+import OrderDetails from './components/Dashboarditems/Orders/OrderDetails/OrderDetail.jsx'
+import Orders from './components/Dashboarditems/Orders/MyOrders/Orders.jsx'
 
 function App() {
 
@@ -24,7 +26,9 @@ function App() {
         <Route path='/dashboard' element={< Dashboard/>} />
         <Route path='/wishlist' element={<Wishlist/>} />
         <Route path='/SellerAd' element={<SellerAd />} /> 
-        <Route path='/market' element={<Market/>} /> 
+        <Route path='/market' element={<Market/>} />
+        <Route path="/order/:id" element={<OrderDetails/>} />
+        <Route path="/myorder" element={<Orders/>} />
       </Routes>
     </Router>
       
