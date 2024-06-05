@@ -8,14 +8,10 @@ import Profile from '../components/Dashboarditems/Profile/Profile';
 import Address from '../components/Dashboarditems/Address/Address';
 import { Link } from 'react-router-dom'; // Import Link component
 import PasswordManager from '../components/Dashboarditems/PasswordManager/PasswordManager';
-<<<<<<< HEAD
 import Orders from '../components/Dashboarditems/Orders/MyOrders/Orders';
-=======
-import Orders from '../components/Dashboarditems/Orders/Orders';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser } from '../Redux/userSlice';
 import Cookies from 'js-cookie';
->>>>>>> 546409439494d1b3564fe7486c08d98a9898c0c9
 
 function Dashboard() {
   const [activeSection, setActiveSection] = useState('Shelf');
@@ -98,7 +94,7 @@ function Dashboard() {
           </div>
           <div className={`content-section ${activeSection === 'Address' ? 'active' : ''}`}>
             <h1 className='shelf-content'>Address Content</h1>
-            <Address />
+            <div className='address-manager-container'><Address /></div>
           </div>
           <div className={`content-section ${activeSection === 'Orders' ? 'active' : ''}`}>
             <h1 className='shelf-content'>My Orders</h1>

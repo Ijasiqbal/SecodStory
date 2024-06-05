@@ -32,7 +32,6 @@ function Orders() {
 
   return (
     <div className={styles.ordersContainer}>
-      <h1 className={styles.ordersTitle}>My Orders</h1>
       <div className={styles.ordersList}>
         {orders.map((order) => (
           <div key={order.id} className={styles.orderItem}>
