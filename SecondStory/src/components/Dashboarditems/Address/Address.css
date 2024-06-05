@@ -1,12 +1,5 @@
 /* General container styling */
-.address-manager-container {
-  max-width: 900px; 
-  margin: auto;
-  padding: 20px 100px;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  font-family: 'Arial', sans-serif;
-}
+
 
 
 .address-container {

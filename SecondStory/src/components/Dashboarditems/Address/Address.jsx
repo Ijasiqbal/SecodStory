@@ -66,7 +66,7 @@ function Address() {
   };
 
   return (
-    <div className='address-manager-container'>
+    <>
       <div className="address-container">
         < div className="form">
          <div className='form-button-container'>
@@ -212,7 +212,7 @@ function Address() {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

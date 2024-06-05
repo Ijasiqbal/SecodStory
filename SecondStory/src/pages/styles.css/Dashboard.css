@@ -204,3 +204,21 @@
     animation-duration: 0s !important;
   }
 }
+
+.address-manager-container {
+  max-width: 900px; 
+  margin: auto;
+  padding: 20px 50px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .address-manager-container {
+    
+    padding: 0;
+    background-color: white;
+   
+  }
+}

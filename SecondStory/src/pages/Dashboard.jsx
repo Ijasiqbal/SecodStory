@@ -94,7 +94,7 @@ function Dashboard() {
           </div>
           <div className={`content-section ${activeSection === 'Address' ? 'active' : ''}`}>
             <h1 className='shelf-content'>Address Content</h1>
-            <Address />
+            <div className='address-manager-container'><Address /></div>
           </div>
           <div className={`content-section ${activeSection === 'Orders' ? 'active' : ''}`}>
             <h1 className='shelf-content'>My Orders</h1>
