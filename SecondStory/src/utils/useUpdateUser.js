@@ -2,8 +2,8 @@ import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { setUser } from "../Redux/userSlice";
-import axiosInstance from "../utils/axiosInstance";
-import { apiEndPoint } from "../utils/apiEndpoint";
+import axiosInstance from "../api/axiosInstance";
+import { apiEndPoint } from "../api/apiEndpoint";
 
 
 

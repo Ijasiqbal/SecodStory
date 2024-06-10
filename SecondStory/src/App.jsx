@@ -12,6 +12,7 @@ import Market from './pages/Market.jsx'
 import OrderDetails from './components/Dashboarditems/Orders/OrderDetails/OrderDetail.jsx'
 import Orders from './components/Dashboarditems/Orders/MyOrders/Orders.jsx'
 import ProtectedRoute from './utils/ProtectedRoute.jsx'
+import ChatWidget from './components/ChatWidget/index.jsx'
 
 function App() {
 
@@ -28,12 +29,13 @@ function App() {
           <Dashboard />
         </ProtectedRoute>} />
         <Route path='/wishlist' element={<Wishlist/>} />
-        <Route path='/SellerAd' element={<SellerAd />} /> 
+        <Route path='/listed-product' element={<SellerAd />} /> 
         <Route path='/market' element={<Market/>} />
         <Route path="/order/:id" element={<OrderDetails/>} />
         <Route path="/myorder" element={<Orders/>} />
       </Routes>
     </Router>
+    <ChatWidget />
       
     </>
   )

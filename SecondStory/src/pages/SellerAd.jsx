@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
+import "react-multi-carousel/lib/styles.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-
 export default function SellerAd() {
   const cardsData = [
     {
@@ -78,7 +78,7 @@ export default function SellerAd() {
         <div className="mt-5 mr-4 ml-4 text-base leading-6 max-md:mx-2.5">
           {title}
         </div>
-        <div className="self-start mt-2.5 ml-2.5 text-lg font-medium leading-7">
+        <div className="self-start mt-2.5 ml-2.5 text-lg leading-7">
           {author}
         </div>
         <div className="self-start mt-2.5 ml-2.5 text-base leading-7">
@@ -98,14 +98,14 @@ export default function SellerAd() {
         <article className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
           <h2 className="flex flex-col grow text-black max-md:mt-10">
             <div className="flex flex-col pl-2.5">
-              <div className="flex gap-3 items-center text-2xl">
+              <div className="flex gap-3 items-center">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/361864214badb4aface990e32390bdbcf8840de9bd3f6bb1737f770fdd4729e1?apiKey=d486896be9e345128b8f51543dad92f5&"
-                  className="shrink-0 aspect-[1.01] w-[83px]"
+                  className="shrink-0 aspect-[1.01] w-[73px]"
                   alt="User Avatar"
                 />
-                <span className="flex-auto my-auto">{name}</span>
+                <span className="flex-auto my-auto text-lg">{name}</span>
               </div>
               <div className="flex gap-1 items-start -ml-3 mt-11 font-medium max-md:mt-10">
                 <img
@@ -115,7 +115,7 @@ export default function SellerAd() {
                   alt="Calendar Icon"
                 />
                 <span className="flex flex-col grow shrink-0 basis-0 w-fit">
-                  <span className="text-s">Location</span>
+                  <span className="text-base">Location</span>
                   <time className="text-lg">{location}</time>
                 </span>
               </div>
@@ -128,7 +128,7 @@ export default function SellerAd() {
                 alt="Calendar Icon"
               />
               <span className="flex flex-col grow shrink-0 basis-0 w-fit">
-                <span className="text-s">Posting Date</span>
+                <span className="text-base">Posting Date</span>
                 <time className="text-lg">{postingDate}</time>
               </span>
             </div>
@@ -142,8 +142,8 @@ export default function SellerAd() {
         </article>
         <aside className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
           <div className="flex flex-col mt-1 font-medium text-black max-md:mt-10">
-            <p className="self-center text-2xl">Rs. {price}</p>
-            <button className=" rounded-full flex gap-4 px-7 py-3 mt-5 text-lg border border-black border-solid bg-zinc-100 max-md:px-5">
+            <p className="self-center text-xl">Rs. {price}</p>
+            <button className=" rounded-full flex gap-4 px-7 py-3 mt-5 text-base border border-black border-solid bg-zinc-100 max-md:px-5">
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/0db90fdea1a91a81aea6ad0d37a08f45954fc4f3b8d90833fd7e441821af6e40?apiKey=d486896be9e345128b8f51543dad92f5&"
@@ -159,7 +159,7 @@ export default function SellerAd() {
   }
 
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-200">
       <Navbar />
       <div className="flex gap-3 pt-10 pb-3 justify-center bg-slate-200">
         <section className="flex flex-col px-16 pt-8 pb-5 bg-white rounded-md max-w-[521px] max-md:px-5">
@@ -175,13 +175,15 @@ export default function SellerAd() {
         </section>
         <div className="flex flex-col px-6 pt-5 pb-20 bg-white rounded-md max-w-[759px] max-md:px-5">
           <header className="flex gap-5 text-3xl font-medium text-black max-md:flex-wrap max-md:max-w-full">
-            <h1 className="flex-auto">The Fault in Our Stars</h1>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/335cb6a41a8eca0371b3e562eba1b4a80a87c0c9ca987f269f7a3fee6bdb8cbc?apiKey=d486896be9e345128b8f51543dad92f5&"
-              className="shrink-0 aspect-square w-[31px]"
-              alt="Book Cover"
-            />
+            <h1 className="flex-auto text-3xl">The Fault in Our Stars</h1>
+            <button>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/335cb6a41a8eca0371b3e562eba1b4a80a87c0c9ca987f269f7a3fee6bdb8cbc?apiKey=d486896be9e345128b8f51543dad92f5&"
+                className="shrink-0 aspect-square w-[31px]"
+                alt="Wishlist"
+              />
+            </button>
           </header>
           <main className="self-center mt-10 w-full max-w-[628px] max-md:max-w-full">
             <UserCard
@@ -194,31 +196,34 @@ export default function SellerAd() {
           </main>
         </div>
       </div>
-      <section className="flex flex-col px-11 pt-10 pb-20 bg-white rounded-md max-md:px-5">
-        <h2 className="self-start text-2xl font-medium text-black max-md:max-w-full">
-          Related Options
-        </h2>
-        <div className="self-center mt-7 w-full max-w-[1115px] max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-            {cardsData.map((card, index) => (
-              <div
-                key={index}
-                className={`${
-                  index !== 0 ? "ml-5" : ""
-                } w-3/12 max-md:ml-0 max-md:w-full`}
-              >
-                <Card
-                  imgSrc={card.imgSrc}
-                  imgAlt={card.imgAlt}
-                  title={card.title}
-                  author={card.author}
-                  price={card.price}
-                />
-              </div>
-            ))}
+      <div className="flex bg-slate-200 justify-center">
+        <div className="flex flex-col px-11 pt-10 pb-20 bg-white rounded-md max-md:px-5">
+          <h2 className="self-start text-2xl font-medium text-black max-md:max-w-full">
+            Related Options
+          </h2>
+          <div className="self-center mx-3  mt-7 w-full max-w-[1115px] max-md:max-w-full">
+            <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+              {cardsData.map((card, index) => (
+                <div
+                  key={index}
+                  className={`${
+                    index !== 0 ? "ml-5" : ""
+                  } w-3/12 max-md:ml-0 max-md:w-full`}
+                >
+                  <Card
+                    imgSrc={card.imgSrc}
+                    imgAlt={card.imgAlt}
+                    title={card.title}
+                    author={card.author}
+                    price={card.price}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+
       <Footer />
     </div>
   );
