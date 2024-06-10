@@ -7,8 +7,9 @@ import AddBook from './AddBook'
 import ShelfBook from './ShelfBook'
 import book1 from '../../../assets/f3.jpg'
 import book2 from '../../../assets/f2.jpg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Row from './Row'
+import { useSelector } from 'react-redux'
 
 export default function Shelf() {
 
@@ -46,6 +47,13 @@ export default function Shelf() {
     // Add more books as needed
   ]);
 
+  const sellBooks = useSelector((state)=> state.user.user.shelf.sell)
+  const lendBooks = useSelector((state)=> state.user.user.shelf.lend)
+  const keepBooks = useSelector((state)=> state.user.user.shelf.keep)
+
+  useEffect(()=>{
+  })
+
   
   return (
     <div className={styles.base}>
@@ -53,8 +61,8 @@ export default function Shelf() {
         <img src={shelf1} alt='shelf1' className={styles.shelf1img} />
         <div className={styles.row1}>
           <Row 
-          books={books}
-          category="To Sell"
+          books={sellBooks}
+          category="sell"
           />
         </div>
       </div>
@@ -62,8 +70,8 @@ export default function Shelf() {
         <img src={shelf2} alt='shelf1' className={styles.shelf1img} />
           <div className={styles.row2}>
             <Row 
-            books={books}
-            category="To Lend"
+            books={lendBooks}
+            category="lend"
             />
           </div>
       </div>
@@ -71,8 +79,8 @@ export default function Shelf() {
         <img src={shelf2} alt='shelf1' className={styles.shelf1img} />
         <div className={styles.row3}>
           <Row 
-          books={books}
-          category="To Keep"
+          books={keepBooks}
+          category="keep"
           />
         </div>
       </div>

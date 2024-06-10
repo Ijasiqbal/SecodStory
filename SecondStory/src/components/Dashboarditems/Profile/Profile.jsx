@@ -46,7 +46,7 @@ function Profile() {
       const response = await axiosInstance.patch(`${apiEndPoint}user/profile`, { [field]: user[field] }, { withCredentials: true });
     } catch (error) {
       console.error(`${field} save failed:`, error);
-      
+
       
     }
     setEditingField(null);
@@ -64,19 +64,11 @@ function Profile() {
     }
   };
 
+
+
   useEffect(() => {
     fetchProfile();
   }, []);
-
-  useEffect(() => {
-    if (!user) {
-      navigate('/login');
-    }
-  }, [user, navigate]);
-
-  if (!user) {
-    return null; // Return null or a loading indicator if user is not available yet
-  }
 
   return (
     <div className="profile-container">

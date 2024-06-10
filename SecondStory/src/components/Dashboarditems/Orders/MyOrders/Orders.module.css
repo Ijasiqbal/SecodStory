@@ -22,6 +22,7 @@ body {
 }
 .orderItemInfotitle{
   font-size: 18px;
+  max-width: 300px;
 }
 
 .orderItem {

@@ -17,6 +17,8 @@ import {
 } from '@chakra-ui/react';
 import styles from './AddBook.module.css';
 import axiosInstance from '../../../api/axiosInstance';
+import useUpdateUser from '../../../utils/useUpdateUser';
+
 
 const AddBook = ({ category }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -27,6 +29,7 @@ const AddBook = ({ category }) => {
   const [images, setImages] = useState({ main_image: '', image1: '', image2: '' });
   const [genre, setGenre] = useState('');
   const [subgenre, setSubgenre] = useState('');
+  const {updateUser, loading , error} = useUpdateUser();
 
   const genres = [
     { value: 'Fiction', label: 'Fiction' },
@@ -47,17 +50,6 @@ const AddBook = ({ category }) => {
     ],
   };
 
-  const handleFileChange = (e) => {
-    const files = Array.from(e.target.files);
-    if (files.length >= 3) {
-      setImages({
-        main_image: URL.createObjectURL(files[0]), // Replace with your actual upload logic
-        image1: URL.createObjectURL(files[1]), // Replace with your actual upload logic
-        image2: URL.createObjectURL(files[2]), // Replace with your actual upload logic
-      });
-    }
-  };
-
   const handleSave = async () => {
     const formData = {
       title,
@@ -66,12 +58,13 @@ const AddBook = ({ category }) => {
       price,
       images,
       genres: genre,
-      category: category === 'To Sell' ? 'sell' : 'lend',
+      category,
     };
     try {
-      console.log('Adding book:', formData)
+      console.log('Adding book:', formData);
       const response = await axiosInstance.post(`book/addBook`, formData);
       console.log('Book added successfully:', response.data);
+      updateUser();
     } catch (error) {
       console.error('Error adding book:', error);
     }
@@ -138,12 +131,30 @@ const AddBook = ({ category }) => {
               />
             </Box>
             <Box mb={4}>
-              <label htmlFor="photos">Photos</label>
+              <label htmlFor="main_image">Main Image URL</label>
               <Input
-                id="photos"
-                type="file"
-                multiple
-                onChange={handleFileChange}
+                id="main_image"
+                value={images.main_image}
+                onChange={(e) => setImages({ ...images, main_image: e.target.value })}
+                placeholder="Enter main image URL"
+              />
+            </Box>
+            <Box mb={4}>
+              <label htmlFor="image1">Image 1 URL</label>
+              <Input
+                id="image1"
+                value={images.image1}
+                onChange={(e) => setImages({ ...images, image1: e.target.value })}
+                placeholder="Enter image 1 URL"
+              />
+            </Box>
+            <Box mb={4}>
+              <label htmlFor="image2">Image 2 URL</label>
+              <Input
+                id="image2"
+                value={images.image2}
+                onChange={(e) => setImages({ ...images, image2: e.target.value })}
+                placeholder="Enter image 2 URL"
               />
             </Box>
             <Box mb={4}>

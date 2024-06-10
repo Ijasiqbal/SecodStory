@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Row.module.css';
 import ShelfBook from './ShelfBook';
 import AddBook from './AddBook';
@@ -11,7 +11,7 @@ export default function Row({ books, category}) {
       return <AddBook category= {category} />;
     }
 
-    return <ShelfBook key={item.id} book={item} />;
+    return <ShelfBook  book={item} />;
   };
   const responsiveOptions = [
     {
@@ -32,6 +32,11 @@ export default function Row({ books, category}) {
   ];
 
   const booksWithAddBook = [...books, { addBook: true }];
+
+  useEffect(()=>{
+    console.log('books',books)
+
+  })
 
   return (
     <div className={styles.row}>

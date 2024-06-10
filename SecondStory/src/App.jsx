@@ -11,6 +11,7 @@ import SellerAd from './pages/SellerAd.jsx'
 import Market from './pages/Market.jsx'
 import OrderDetails from './components/Dashboarditems/Orders/OrderDetails/OrderDetail.jsx'
 import Orders from './components/Dashboarditems/Orders/MyOrders/Orders.jsx'
+import ProtectedRoute from './utils/ProtectedRoute.jsx'
 
 function App() {
 
@@ -23,7 +24,9 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product" element={<Product />} />
-        <Route path='/dashboard' element={< Dashboard/>} />
+        <Route path='/dashboard' element={<ProtectedRoute >
+          <Dashboard />
+        </ProtectedRoute>} />
         <Route path='/wishlist' element={<Wishlist/>} />
         <Route path='/SellerAd' element={<SellerAd />} /> 
         <Route path='/market' element={<Market/>} />
