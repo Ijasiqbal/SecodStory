@@ -71,6 +71,8 @@ const AddBook = ({ category }) => {
     onClose();
   };
 
+  
+
   return (
     <>
       <Box className={styles.base} onClick={onOpen}>
