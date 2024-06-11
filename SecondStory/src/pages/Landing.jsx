@@ -8,6 +8,8 @@ import Service from '../components/Landing/Service'
 import Navbar from '../components/Navbar'
 import { UserContext } from '../context/UserContext'
 import { useSelector } from 'react-redux'
+import Showcase from '../components/Landing/ShowCase'
+import Articles from '../components/Landing/Articles'
 
 
 export default function Landing() {
@@ -25,6 +27,8 @@ export default function Landing() {
         <Service />
         <Categories />
         <LoginIntro />
+        <Showcase />
+        <Articles/>
         <Footer />
         
         
